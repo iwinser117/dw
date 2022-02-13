@@ -55,7 +55,7 @@ document.write("</br>");
 document.write(a + " " + b); */
 
 
-
+/* 
 
 
 let a = 3;
@@ -77,7 +77,7 @@ console.log(a);
 
 console.log(--a);
 console.log(++a);
-
+ */
 
 
 
@@ -88,7 +88,7 @@ console.log(++a);
 
 
 //programa par calcular el numero de segundos de un dia
-const horas = 24;
+/* const horas = 24;
 const minutos = 60;
 const segundo = 60;
 
@@ -100,14 +100,14 @@ let segundos_Dias = minutos_Dia * segundo;
 console.log(minutos_Dia);
 console.log(segundos_Dias);
 
-
+ */
 
 
 
 
 
 //conversor de euaros a dolares
-
+/* 
 const euros = 7;
 let dolar = euros / 2;
 
@@ -130,7 +130,7 @@ console.log(fahrenheit);
 console.log((cuantos_grados).toFixed(1));
 
 console.log(cuantos_grados)
-
+ */
 
 
 
@@ -146,3 +146,5 @@ console.log(cuantos_grados)
 
 //caja de sus sueños
 
+
+alert("hola mundo com esta");
