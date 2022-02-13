@@ -147,4 +147,4 @@ console.log(cuantos_grados)
 //caja de sus sueños
 
 
-alert("hola mundo com esta");
+alert("hola mundo como esta");
