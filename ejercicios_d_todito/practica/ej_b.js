@@ -147,4 +147,32 @@ console.log(cuantos_grados)
 //caja de sus sueños
 
 
-alert("hola mundo como esta");
+class Equipo {
+    static numeroEquipos = 0;
+
+    constructor (nombre, serial , marca , color){
+        this._nombre = nombre;
+        this._serial = serial;
+        this._marca = marca;
+        this._color = color;
+        this._equipoNumer = ++Equipo.numeroEquipos;
+    }
+    get nombre() {
+        return this._nombre;
+    }
+    get marca() {
+        return this._marca;
+    }
+    set marca(marca) {
+        this._marca = marca;
+    }
+}
+/* equipo1 = new Equipo ("compu",123,"dell","negro")
+equipo1.marca = "hp";
+console.log(equipo1.marca); */
+
+let i = 0;
+for (i=1; i<=5; i++ ){
+    console.log(i);
+}
+console.log (i);
