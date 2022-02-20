@@ -35,13 +35,13 @@ class Raton extends DispositivoEntrada {
     } */
 
     toString() {
-        return this.idRaton + " " + this.marca;
+        return "nombre" + this.idRaton + " " + this.marca;
     }
 }
 
 //dejo el ejemplo ya que estaba ensayando los metoso set y get ya que el get es solo para mostrar y con el set me sirve para poder ingresar y poder editar la inforacion que tengo en la  variable o en el metoso asignado a la clase que estoy trabajando
 raton1 = new Raton("usb","del",123);
-raton2 = new Raton("usb", "del", 123);
+raton7 = new Raton("usb", "del", 4545);
 raton4 = new Raton("usb", "del", 123);
 raton4.idRaton = 5555;
 console.log(raton4.toString());
@@ -67,7 +67,8 @@ class Teclado extends DispositivoEntrada {
     }
 }
 
-
+teclado1 = new Teclado ("tipoc","marcadAgua","6767");
+console.log(teclado1);
 
 
 
@@ -118,20 +119,27 @@ console.log(moni1.marca);
 
 
 
-class Computadora {
+class Computadora extends (Monitor,Teclado,Raton) {
     static contadorComputadora = 0;
-
-    constructor (nombre, monitor,teclado,raton,idComputadora){
+    
+    constructor (nombre, Monitor,Teclado,Raton,idComputadora){
     super(Monitor,Teclado,Raton);
-    monitor = Monitor;
-    teclado = Teclado;
-    raton = Raton;
+    this.monitor = Monitor;
+    // this.Teclado =Teclado;
+    this.raton = Raton;
     this._nombre = nombre;
     this._idComputadora = idComputadora;
     this._contadorComputadoras = ++Computadora.contadorComputadora;
     }
-    
+
+     toString() {
+         return `
+        ${this._nombre}
+        ${this.monitor} 
+        ${this.Teclado}
+        ${this.raton}`;
+     }
 }
 
-computadora1 = new Computadora ("hola","ed","pulgadas","as","df","gh","hj");
-console.log(computadora1);
+computadora1 = new Computadora("hola",moni1,teclado1,raton7, 34,"seee","wsaqw", "sd","eww", "sd", 16, "df", "sd","rrr","df","sd");
+console.log(computadora1.toString());
