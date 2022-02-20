@@ -79,7 +79,59 @@ class Monitor {
         this._tamaño = tamaño;
         this._contadorMonitores = ++Monitor.contadorMonitores;
     }
+    get idMonitor() {
+        return this._idMonitor;
+    }
+    get marca() {
+        return this._marca;
+    }
+    set marca (marca){
+        this._marca = marca;
+    }
+    get tamaño() {
+        return this._tamaño;
+    }
+    set tamaño(tamaño) {
+        this._tamaño = tamaño;
+    }
+    toString() {
+
+        return `
+        ${this.idMonitor} 
+        ${this.marca} 
+        ${this.tamaño}
+        ${this._contadorMonitores}`;
+       
+    }
 }
 
-moni1 = new Monitor(123,"dil","grande");
-console.log(moni1);
+moni1 = new Monitor(123,"dil","pequeño");
+moni2 = new Monitor(123, "dil", "mediano");
+moni2.tamaño = "muygrande";
+
+moni4 = new Monitor(123, "dil", "grande");
+console.log(moni2.toString());
+
+
+moni1.marca = "jola"
+console.log(moni1.marca);
+
+
+
+class Computadora {
+    static contadorComputadora = 0;
+
+    constructor (nombre, monitor,teclado,raton,idComputadora){
+    super(Monitor,Teclado,Raton);
+    monitor = Monitor;
+    teclado = Teclado;
+    raton = Raton;
+    this._nombre = nombre;
+    this._idComputadora = idComputadora;
+    this._contadorComputadoras = ++Computadora.contadorComputadora;
+    }
+    
+}
+
+computadora1 = new Computadora ("hola","ed","pulgadas","as","df","gh","hj");
+console.log(computadora1);
