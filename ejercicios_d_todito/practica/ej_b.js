@@ -167,6 +167,7 @@ class Equipo {
         this._marca = marca;
     }
 }
+
 /* equipo1 = new Equipo ("compu",123,"dell","negro")
 equipo1.marca = "hp";
 console.log(equipo1.marca); */
