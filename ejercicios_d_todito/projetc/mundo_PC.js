@@ -21,11 +21,10 @@ class DispositivoEntrada {
 
 class Raton extends DispositivoEntrada {
     static contadorRatones = 0;
-    constructor(tipoEntrada,marca,idRaton){
+    constructor(tipoEntrada,marca,){
         super(tipoEntrada, marca);
 
-        this._idRaton =Number(idRaton);
-        this._contadorRatones = ++Raton.contadorRatones;       
+        this._idRaton =++ Raton.contadorRatones;       
     }
     get idRaton() {
         return this._idRaton;
@@ -36,20 +35,21 @@ class Raton extends DispositivoEntrada {
     } */
 
     toString() {
-        return `
+        return `Raton: [idRaton: ${this._idRaton}, tipoEntrada: ${this._tipoEntrada}, marca: ${this._marca}]`;
+        /* return `
+        idRatonRaton es: ${this.idRaton}
         tipo de entrada raton:${this.tipoEntrada} 
         marca es: ${this.marca} 
-        idRatonRaton es: ${this.idRaton} 
-        y vamos ${this._contadorRatones} ratones`;
+        `; */
     }
 }
 
 //dejo el ejemplo ya que estaba ensayando los metoso set y get ya que el get es solo para mostrar y con el set me sirve para poder ingresar y poder editar la inforacion que tengo en la  variable o en el metoso asignado a la clase que estoy trabajando
-raton1 = new Raton("usb","del",12345);
-raton7 = new Raton("usb", "del", 4545);
-raton4 = new Raton("usb", "del", 123777);
-raton4.idRaton = 5555;
-console.log(raton4.toString());
+raton1 = new Raton("usb","de1l");
+raton7 = new Raton("usb", "del2");
+raton4 = new Raton("usb", "del3");
+console.log(raton7.toString());
+
 
 
 
@@ -61,37 +61,38 @@ console.log(raton4.toString());
 
 class Teclado extends DispositivoEntrada {
     static contadorTeclado = 0;
-    constructor(tipoEntrada, marca, idTeclado) {
+    constructor(tipoEntrada, marca,) {
         super(tipoEntrada, marca);
 
-        this._idTeclado = Number(idTeclado);
-        this._contadorTeclado = ++Teclado.contadorTeclado;
+        this._idTeclado =  ++Teclado.contadorTeclado;
     }
     get idTeclado() {
         return this._idTeclado;
     }
     toString() {
-        return`
+       /*  return`
+        el id de teclado es ${this.idTeclado}
         tipo entrada de teclado es:${this.tipoEntrada}
         marca del teclado es ${this.marca}
-        el id de teclado es ${this.idTeclado}
-        y vamos ${this._contadorTeclado} teclados
-        `;
+        
+        `; */
+
+        return `Teclado: [idTeclado: ${this._idTeclado}, tipoEntrada: ${this._tipoEntrada}, marca: ${this._marca}]`;
     }
 }
 
- let teclado1 = new Teclado ("tipoc","marcadAgua","6767");
-console.log(teclado1.toString());
+ let teclado1 = new Teclado ("tipoc","marcadAgua");
+let teclado2 = new Teclado("tokc", "alhott");
+console.log(teclado2.toString());
 
 
 
 class Monitor {
     static contadorMonitores = 0;
-    constructor (idMonitor,marca, tamaño){
-        this._idMonitor = idMonitor;
+    constructor (marca, tamaño){
+        this._idMonitor = ++Monitor.contadorMonitores;
         this._marca = marca;    
         this._tamaño = tamaño;
-        this._contadorMonitores = ++Monitor.contadorMonitores;
     }
     get idMonitor() {
         return this._idMonitor;
@@ -110,54 +111,75 @@ class Monitor {
     }
     toString() {
 
-        return `
-        el id del monitor es:${this.idMonitor} 
-        la marca del monitor es:${this.marca} 
-        el tamaño del monitor es:${this.tamaño}
-        los monitores que vamos son:${this._contadorMonitores}`;
+        return `Monitor: [idMonitor: ${this._idMonitor}, Marca: ${this._marca}, Tamaño:  ${this._tamaño}]`;
        
     }
 }
 
-moni1 = new Monitor(123,"dil","pequeño");
-moni2 = new Monitor(123, "dil", "mediano");
-moni2.tamaño = "muygrande";
-
-moni4 = new Monitor(123, "dil", "grande");
+moni1 = new Monitor("dihhhl","pequeño");
+moni2 = new Monitor("dilaa", "mediano");
+moni4 = new Monitor(123, "grande");
 console.log(moni2.toString());
-
-
-moni1.marca = "jola"
-console.log(moni1.marca);
+console.log(moni4.toString());
 
 
 
-class Computadora extends (Monitor,Teclado,Raton) {
+class Computadora {
     static contadorComputadora = 0;
     
-    constructor (nombre, Monitor,Teclado,Raton,idComputadora){
-    super(Monitor,Teclado,Raton);
-    this.monitor = Monitor;
-    this.teclado =Teclado;
-    this.raton = Raton;
+    constructor (nombre, monitor,teclado,raton){
+        
+    this._idComputadora = ++Computadora.contadorComputadora;
     this._nombre = nombre;
-    this._idComputadora = idComputadora;
-    this._contadorComputadora = ++Computadora.contadorComputadora;
+    this._monitor = monitor;
+    this._teclado = teclado;
+    this._raton = raton;
     }
     set contadorComputadora(contadorComputadora) {
         this._contadorComputadora = contadorComputadora;
     }
 
      toString() {
-         return `
-        el nomnre de la computadora es:${this._nombre}
-        los datos de este monitor son:${this.monitor} 
-        los dates del teclado${this.teclado}
-        los datos del raton${this.raton}
-        el id de la computadora es ${this._idComputadora}
-        y vamos ${this._contadorComputadora} computadora`;
+         return `Computadora[${this._idComputadora}: ${this._nombre} \n ${this._monitor} \n ${this._raton} \n ${this
+        ._teclado}`;
        }
 }
 
-computadora1 = new Computadora("hola",new Monitor("qwe","rty","gtb"),new Teclado ("parametro1","parametro2",117),raton7, 34);
-console.log(computadora1.teclado);
+computadora1 = new Computadora("hp",moni1,teclado1,raton1);
+computadora2 = new Computadora("armada",moni2, teclado2, raton7);
+console.log(computadora2.toString())
+console.log(computadora1.toString());
+
+
+
+
+
+class Orden {
+    static contadorOrdenes= 0;
+
+    constructor(){
+        this._idOrden = ++Orden.contadorOrdenes;
+        this._computadoras = [];
+    }
+    get idOrden() {
+        return this._idOrden;
+    }
+    agregarComputadora (computadora){
+        this._computadoras.push(computadora);
+    }
+    mostrarOrden(){
+        let computadorasOrden = "";
+        for (let computadora of this._computadoras){
+            computadorasOrden += `\n ${computadora}`
+        }
+
+        console.log(`Orden: ${this._idOrden}, computadoras : ${computadorasOrden} `);
+    }
+}
+
+
+let orden1 = new Orden();
+orden1.agregarComputadora(computadora1);
+orden1.agregarComputadora(computadora2); 
+orden1.agregarComputadora(computadora1);
+orden1.mostrarOrden();
