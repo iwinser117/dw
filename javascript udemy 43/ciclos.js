@@ -1,19 +1,19 @@
-/* for (let contador = 0; contador < 10 ; contador ++){
+let contador = 20;
+for (let contador = 0; contador <= 10 ; contador += 2){
     console.log(contador);
 }
 console.log ("se acabo el ciclo")
 
-for (let contador = 0; contador <= 10; contador++){
+for (let contador = 0; contador < 10; contador++){
     if (contador % 2 == 0){
     console.log(contador); 
-    break;
     }
 }
 console.log("fin del ciclo") 
 
 
 
- */
+
 
 // estiquetas
 
@@ -32,7 +32,7 @@ console.log("fin del ciclo")
 //practica ciclos for
 let dias = ["lunes", "martes","miercoles", "jueves", "viernes", "sabado", "domingo"];
 
-for (i = 0 ; i <= dias.length ; i++){
+for (i = 0 ; i < dias.length ; i++){
     console.log(dias[i]);
 }
 
@@ -88,12 +88,12 @@ for (i = 1; i<= toda_sopa;i++){
     console.log(i);
 }
 
-let frase =  prompt("escribe tu nobnre");
+/* let frase =  prompt("escribe tu nobnre");
 console.log(frase.values());
 
 frase.forEach(function (elemento, indice, array) {
     console.log(elemento, indice);
-})
+}) */
 
 
 
@@ -102,11 +102,39 @@ frase.forEach(function (elemento, indice, array) {
 
 
 
+let estudiantes = ["uno", "dos", "tres", "cuatro"];
 
+for (i = 0 ; i < estudiantes.length; i++){
+    console.log(`hola ${estudiantes[i]
+}` );
+}
 
+//let numeros = 0;
 
+function todos (numeros){
+    
+    for (numeros= 0; numeros < 17; numeros++){
+        console.log(numeros);
+    }
+    return numeros;
+}
+console.log(todos());
 
+//piedra, papel, tijera
 
+let a = "piedra";
+let b = "papel";
+let c = "tijera";
+let d =c;
+if (d == a){
+    console.log(a);
+}
+else if (d == b){
+    console.log("ganas a la piedra, pirdes contra papel");
+}
+else if (d == c){
+    console.log("ganas al papel, pirdes contra piedra");
+}
 
 
 

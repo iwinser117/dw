@@ -18,6 +18,9 @@ class Persona {
     }
 }
 
+persona77 = new Persona("fernando","arciniegas");
+console.log(persona77);
+
 
 
 
