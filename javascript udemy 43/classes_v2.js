@@ -1,20 +1,20 @@
 class Persona {
     constructor(nombre, apellido) {
-        this._nombre = nombre;
-        this._apellido = apellido;
+        this.nombreDeclarado = nombre;
+        this.apellidoDecarado = apellido;
     }
     get nombre(){
-        return this.nombre;
+        return this.nombreDeclarado;
     }
-    set nombre(_nombre) {
-        this.nombre = _nombre;
+    set nombre(nombreDeclarado) {
+        this.nombre = nombreDeclarado;
     }   
 
     get apellido() {
-        return this.apellido;
+        return this.apellidoDecarado;
     }
-    set apellido(_apellido) {
-        this.apellido = _apellido;    
+    set apellido(apellidoDecarado) {
+        this.apellido = apellidoDecarado;    
     }
 }
 
@@ -35,6 +35,9 @@ class Empleado extends Persona{
     set departamento(departamento){
     this._departamento = departamento;
     }
+    toString() {
+        return this.nombre + " " + this.apellido;
+    }
 }
 
 
@@ -43,5 +46,7 @@ class Empleado extends Persona{
 console.log(persona1); */
 
 let empleado1 =new Empleado ("maria", "jimenes", "sistemas");
-console.log(empleado1);
-console.log(empleado1._nombre); 
+console.log(empleado1.toString());
+console.log(empleado1.apellido);
+empleado1.apellidoDecarado = "sanchez de quesada";
+console.log(empleado1.toString());

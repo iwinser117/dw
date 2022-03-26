@@ -191,7 +191,7 @@ class Mascota {
         return this.nombre + " " + this.raza;
     }
 
-    get nombreYClase(){
+    get nombreYClase(){     
         return `Nombre: ${this.nombre} Clase:  ${this.clase[2]}`
     }
 }
@@ -199,4 +199,5 @@ class Mascota {
 const mascota1 = new Mascota("Laica", "Chandoberman");
 console.log(mascota1.nombreYClase);
 
-https://linuxhint.com/getters-and-setters-in-javascript-class/
+//linuxhint.com/getters-and-setters-in-javascript-class/
+
