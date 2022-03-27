@@ -6,18 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>enlazar_con_js</title>
 </head>
+
 <body>
-    <script src="../practica/ej_b.js"></script>
+
     <div class="constainer">
         
-        <div class="header">
-            <h1>sistema de ventas</h1>
-        </div>
+    <form id="formulario">
+        Nombre: <input type="text" name="nombre" value="juan"/>
+        
+        <br>
+        Apellido: <input type="text" name="apellido" value="perez"/>
+        <br>
+ 
+        
+    </form>
 
-        <div>
+    <button onclick="mostrarValores()">Mostrar</button>
+    <div id="valores"></div>
+    
+    <script> 
+        
+        function mostrarValores (){
+            let formulario = document.forms["formulario"];
+            let texto = "";
+            let nombre = formulario["nombre"];
+            let apellido = formulario["apelllido"];
+            texto = nombre.value + apellido.value; 
+            document.getElementById("valores").innerHTML = texto;
+        }
 
-        </div>
-
+    </script>
     </div>
 </body>
 </html>
