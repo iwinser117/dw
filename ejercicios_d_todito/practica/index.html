@@ -8,9 +8,6 @@
 </head>
 
 <body>
-
-    <div class="constainer">
-        
     <form id="formulario">
         Nombre: <input type="text" name="nombre" value="juan"/>
         
@@ -25,17 +22,14 @@
     <div id="valores"></div>
     
     <script> 
-        
         function mostrarValores (){
-            let formulario = document.forms["formulario"];
+            let formulario = document.forms['formulario'];
             let texto = "";
-            let nombre = formulario["nombre"];
-            let apellido = formulario["apelllido"];
-            texto = nombre.value + apellido.value; 
-            document.getElementById("valores").innerHTML = texto;
+            let nombre = formulario[`nombre`];
+            let apellido = formulario[`apellido`];
+            texto = nombre.value + `<br/>`+ apellido.value; 
+            document.getElementById(`valores`).innerHTML = texto;
         }
-
     </script>
-    </div>
 </body>
 </html>
