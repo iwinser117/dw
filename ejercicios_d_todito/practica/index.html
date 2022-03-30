@@ -8,27 +8,21 @@
 </head>
 
 <body>
-    <form id="formulario">
-        Nombre: <input type="text" name="nombre" value="juan"/>
-        
-        <br>
-        Apellido: <input type="text" name="apellido" value="perez"/>
-        <br>
- 
-        
-    </form>
-
-    <button onclick="mostrarValores()">Mostrar</button>
-    <div id="valores"></div>
+    <h1 id="titulo" onmouseout="funcRoja(this) " onmouseover="funcionamarilla (this)">titulo</h1>    
+    <br>
+    <p>text de rellleno Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus quia itaque a, facilis laudantium totam enim! Ab necessitatibus ipsum earum nostrum non, autem modi doloremque delectus nemo tempore dignissimos magnam.</p>
     
+    Nombre : <input type="text" name="nombre" onchange="convertir(this)"/>
     <script> 
-        function mostrarValores (){
-            let formulario = document.forms['formulario'];
-            let texto = "";
-            let nombre = formulario[`nombre`];
-            let apellido = formulario[`apellido`];
-            texto = nombre.value + `<br/>`+ apellido.value; 
-            document.getElementById(`valores`).innerHTML = texto;
+        function funcionamarilla( titulo ){
+            titulo.style.color = "yellow";
+            titulo.style.font = "200";
+        }
+        function funcRoja (titulo){
+            titulo.style.color = "red";
+        }
+        function convertir (nombreImput){
+            nombreImput.value = nombreImput.value.toUpperCase();
         }
     </script>
 </body>
