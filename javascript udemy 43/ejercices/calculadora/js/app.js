@@ -4,8 +4,7 @@ function sumar(){
     let operandoA = forma[`operandoA`];
     let operandoB = forma[`operandoA`];
     let resultado = parseInt(operandoA.value) + parseInt(operandoB.value);
-    document.getElementById(`resultado`).innerHTML = `resultado ${resultado}`;
-    if(isNaN)(resultado)
+    if (isNaN) (resultado)
         resultado = `la operacion le faltan numeros`;
-    
+    document.getElementById(`resultado`).innerHTML = `resultado ${resultado}`;    
 }
