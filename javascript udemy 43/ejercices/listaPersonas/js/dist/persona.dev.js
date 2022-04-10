@@ -35,4 +35,5 @@ function () {
   }]);
 
   return Persona;
-}();
+}(); // let perosona17 = new Persona("aljadys", "sanhcez");
+// console.log(perosona17)

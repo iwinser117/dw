@@ -16,3 +16,5 @@ class Persona {
         this._apellido = apellido;
     }
 }
+// let perosona17 = new Persona("aljadys", "sanhcez");
+// console.log(perosona17)
