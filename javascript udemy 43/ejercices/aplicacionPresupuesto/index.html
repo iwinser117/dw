@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aplicación Presupuesto</title>
     <link href="css/estilos.css" rel='stylesheet'/>
-    <link href="/website/css/uicons-bold-rounded.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ae0fa710e6.js" crossorigin="anonymous"></script>
-
 </head>
 <body onload="cargarApp()">
     <div class="cabecero">
@@ -43,11 +41,12 @@
                     <div class="derecha limpiarEstilos">
                         <div class="elmento_valor">+ 220</div>
                         <div class="elemento_eliminar">
-                            <button class="elemento_eliminar--btn limpiarEstilos">
-                                <div>
-                                    <i class="fa-solid fa-anchor-lock ">-</i>
-                                </div>
+                            <button class="elemento_eliminar--btn">
+                                    <ion-icon class="close-circle-outline"></ion-icon>
+                                    <!-- <i class="fa-solid fa-acorn">X</i> -->
+                                    <font-awesome-icon icon="fa-solid fa-0" />
                             </button>
+                            
                         </div>
                     </div>
                 </div>
@@ -60,5 +59,6 @@
     <script src='js/Ingreso.js'></script>
     <script src='js/Egreso.js'></script>
     <script src='js/app.js'></script>
+    <script src="https://unpkg .com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
