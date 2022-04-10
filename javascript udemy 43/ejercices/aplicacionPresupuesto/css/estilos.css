@@ -236,7 +236,10 @@ h2 {
 
 
 .elemento_eliminar {
-    float: left;
+    float: right;
+    /* display:block;
+    size: 10px;
+    background: #000; */
 }
 
 .elemento_eliminar--btn {
