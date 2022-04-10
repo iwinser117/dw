@@ -3,6 +3,5 @@ const personas  = [
 ];
 
 function mostrarPersonas(){
-    document.write("hola");
     console.log("mostra personas");
 }
