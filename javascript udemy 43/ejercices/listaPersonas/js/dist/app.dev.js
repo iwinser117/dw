@@ -1,6 +1,6 @@
 "use strict";
 
-var personas = [new Persona("iwinser", "sanchez"), new Persona("carlos", "Lara"), new Persona("dylan", "sanchez")];
+var personas = [];
 
 function mostrarPersonas() {
   console.log("hoolla");
@@ -19,7 +19,13 @@ function agregarPersona() {
   var forma = document.forms["forma"];
   var nombre = forma["nombre"];
   var apellido = forma["apellido"];
-  var persona = new Persona(nombre.value, apellido.value);
-  console.log(persona);
-  personas.push(persona);
+
+  if (nombre.value != "" && apellido.value != "") {
+    var persona = new Persona(nombre.value, apellido.value);
+    console.log(persona);
+    personas.push(persona);
+    mostrarPersonas();
+  } else {
+    console.log("no hay nada que agregar");
+  }
 }
