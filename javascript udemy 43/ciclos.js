@@ -1,191 +1,90 @@
-let contador = 20;
-for (let contador = 0; contador <= 10 ; contador += 2){
-    console.log(contador);
-}
-console.log ("se acabo el ciclo")
+// crear un registro de usuarios con diferente operador, con su respectivo telefono, nombre , apellido y email. y otra clase que evidencie la empresa, su cargo con los demas datos...., y otra que relaciones familiares, y otra de solo mostrar los datos de la perosna
 
-for (let contador = 0; contador < 10; contador++){
-    if (contador % 2 == 0){
-    console.log(contador); 
+
+class Persona {
+    static contador = 1;
+    constructor(nombre, apellido) {
+        this._nombre = nombre;
+        this._apellido = apellido;
+        this.contador = Persona.contador++;
+        this.nombreCompleto = `${this.nombre} ${this.apellido}`;
+    }
+   
+    get nombre() {
+        return this._nombre;
+    }
+    set nombre(nombre) {
+        this._nombre = nombre;
+    }
+    get apellido() {
+        return this._apellido;
+    }
+    set apellido(apellido) {
+        this._apellido = apellido;
+    }
+    toString() {
+        return `
+            ${this.nombre}
+            ${this.apellido}
+            ${this.contador}`; 
     }
 }
-console.log("fin del ciclo") 
+let persona1 = new Persona("iwinser", "sanchez");
+let persona7 = new Persona("iwinser", "sanchez");
+let persona2 = new Persona("iwinser", "sanchez");
+console.log(persona7.nombreCompleto);
 
-
-
-
-
-// estiquetas
-
-inicio:
-for (let contador = 0; contador <= 10; contador++) {
-    if (contador % 2 == 0) {
-        console.log(contador);
-        break  inicio;
+class DatosPersona extends Persona {
+    constructor(nombre, apellido,telefono, email){
+        super (nombre, apellido)
+        this._telefono = telefono;
+        this._email = email;
+    }
+    get telefono() {
+        return this._telefono
+    }
+    set telefono(telefono) {
+        this._telefono = telefono;
+    }
+    get email (){
+        return this._email;
+    }
+    set email(email) {
+        this._email = email;
+    }
+    toString() {
+        return`
+            ${this.contador}
+            los datos completos son:
+            [ Nombre y Apellidos: ${this.nombreCompleto}
+            Telefono:${this.telefono}
+            Email:${this.email}]
+        `
     }
 }
-console.log("fin del ciclo") 
 
+let personaComplet = new DatosPersona("Dylan", "sanchez", 300, "iwinser@gmail.");
+console.log(personaComplet.toString())
 
-
-
-//practica ciclos for
-let dias = ["lunes", "martes","miercoles", "jueves", "viernes", "sabado", "domingo"];
-
-for (i = 0 ; i < dias.length ; i++){
-    console.log(dias[i]);
-}
-
-
-
-
-let numero = 20;
-
-for (i = numero ; i >= 1 ; i=i-3 ){
-    console.log(i);
-}
-console.log("se acabaron los numeros");
-
-for (i = numero ; i <=40; i = i+3){
-    console.log(i)
-}
- let sumas = 30 ;
- let suma = 10;
-for (i = sumas; i <= 70; i+=suma){
-    console.log(i);
-}
-
-let abc = ["a", "b", "c", "d", "e","f","g","h"];
-
-for (i = 0; i <= abc.length-1; i ++){
-    console.log(abc[i]);
-}
-
-let num17 = [1,2,3,4,5,6,7,8,9,10,11,1,3,15,16,17];
-
-for (i = 0; i <= num17.length - 1; i ++) {
-    console.log(num17[i]);
-}
-
-let fecha_hoy = new(Date);
-let hora = "son las : " + fecha_hoy.getHours() + " : " + fecha_hoy.getMinutes() + " horas";
-let dia ="dia " + fecha_hoy.getDay() + " del " + (fecha_hoy.getMonth()+1 ) + " del año " + fecha_hoy.getFullYear();
-console.log(dia);
-console.log(hora);
-
-
-let dato_1 = new (Date);
-let segundo_1 = dato_1.getSeconds();
-console.log(segundo_1);
-
-/* for (i = segundo_1 -1; i <= 60; i++){
-    console.log(i);
-} */
-
-let toma_sopa = "";
-let toda_sopa =7;
-for (i = 1; i<= toda_sopa;i++){
-    console.log(i);
-}
-
-/* let frase =  prompt("escribe tu nobnre");
-console.log(frase.values());
-
-frase.forEach(function (elemento, indice, array) {
-    console.log(elemento, indice);
-}) */
-
-
-
-
-
-
-
-
-let estudiantes = ["uno", "dos", "tres", "cuatro"];
-
-for (i = 0 ; i < estudiantes.length; i++){
-    console.log(`hola ${estudiantes[i]
-}` );
-}
-
-//let numeros = 0;
-
-function todos (numeros){
-    
-    for (numeros= 0; numeros < 17; numeros++){
-        console.log(numeros);
+class Empresa {
+    constructor(nombreEmpresa, cargo){
+        this._nombreEmpresa = nombreEmpresa;
+        this._cargo = cargo;
+        this._persona = [];
+    }   
+    agregarPersona(persona){
+        this._persona.push(persona);
     }
-    return numeros;
+    mostrarDatosfinal(){
+        let datesPersona = "";
+        for (let person of this._persona){
+            datesPersona += person;
+        }
+        console.log(datesPersona);
+    }
 }
-console.log(todos());
-
-//piedra, papel, tijera
-
-let a = "piedra";
-let b = "papel";
-let c = "tijera";
-let d =c;
-if (d == a){
-    console.log(a);
-}
-else if (d == b){
-    console.log("ganas a la piedra, pirdes contra papel");
-}
-else if (d == c){
-    console.log("ganas al papel, pirdes contra piedra");
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let empr1 = new Empresa("oncor", "auditor",persona1)
+let empr2 = new Empresa();
+empr2.agregarPersona(persona7)
+empr2.mostrarDatosfinal(persona7)
+console.log(empr2);;

@@ -46,9 +46,8 @@ class Raton extends DispositivoEntrada {
 }
 
 //dejo el ejemplo ya que estaba ensayando los metoso set y get ya que el get es solo para mostrar y con el set me sirve para poder ingresar y poder editar la inforacion que tengo en la  variable o en el metoso asignado a la clase que estoy trabajando
-raton1 = new Raton("usb","de1l");
-raton7 = new Raton("usb", "del2");
-raton4 = new Raton("usb", "del3");
+let raton7 = new Raton("usb", "del2");
+let raton4 = new Raton("usb", "del3");
 console.log(raton7.toString());
 
 
@@ -117,9 +116,9 @@ class Monitor {
     }
 }
 
-moni1 = new Monitor("dihhhl","pequeño");
-moni2 = new Monitor("dilaa", "mediano");
-moni4 = new Monitor(123, "grande");
+let moni1 = new Monitor("dihhhl","pequeño");
+let moni2 = new Monitor("dilaa", "mediano");
+let moni4 = new Monitor(123, "grande");
 console.log(moni2.toString());
 console.log(moni4.toString());
 
@@ -146,8 +145,8 @@ class Computadora {
        }
 }
 
-computadora1 = new Computadora("hp",moni1,teclado1,raton1);
-computadora2 = new Computadora("armada",moni2, teclado2, raton7);
+let computadora1 = new Computadora("hp",moni1,teclado1,raton7);
+let computadora2 = new Computadora("armada",moni2, teclado2, raton7);
 console.log(computadora2.toString())
 console.log(computadora1.toString());
 
