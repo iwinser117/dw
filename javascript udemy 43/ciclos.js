@@ -56,9 +56,9 @@ class DatosPersona extends Persona {
         return`
             ${this.contador}
             los datos completos son:
-            [ Nombre y Apellidos: ${this.nombreCompleto}
+            Nombre y Apellidos: ${this.nombreCompleto}
             Telefono:${this.telefono}
-            Email:${this.email}]
+            Email:${this.email}
         `
     }
 }
@@ -72,19 +72,60 @@ class Empresa {
         this._cargo = cargo;
         this._persona = [];
     }   
-    agregarPersona(persona){
-        this._persona.push(persona);
+    get nombreEmpresa(){
+        return this._nombreEmpresa;
+    }
+    set nombreEmpresa(nombreEmpresa){
+        this._nombreEmpresa = nombreEmpresa;
+    }
+    get cargo (){
+        return this._cargo;
+    }
+    set cargo (cargo){
+        this._cargo = cargo;
+    }
+    agregarPersona(datosPersona){
+        this._persona.push(datosPersona);
+    }
+    mostrarDatoCompletos() {
+        let datesPersona = "";
+        for (let person of this._persona) {
+            datesPersona += person;
+        }
+        console.log(`
+        Empresa: ${this._nombreEmpresa}, 
+        Cargo: ${this._cargo}` + `, 
+        Datos de la persona :${this.nombreCompleto} `);
     }
     mostrarDatosfinal(){
         let datesPersona = "";
         for (let person of this._persona){
             datesPersona += person;
         }
-        console.log(datesPersona);
+        console.log(`
+        Empresa: ${this._nombreEmpresa}, 
+        Cargo: ${this._cargo}` + `, 
+        Datos de la persona :${datesPersona.toUpperCase()} `);
     }
 }
-let empr1 = new Empresa("oncor", "auditor",persona1)
-let empr2 = new Empresa();
-empr2.agregarPersona(persona7)
-empr2.mostrarDatosfinal(persona7)
-console.log(empr2);;
+let personaConDatos = new Empresa("quick", "mensaje");
+personaConDatos.agregarPersona(persona7);
+let empr2 = new Empresa("quick", "mensaje");
+empr2.agregarPersona(persona7);
+empr2.mostrarDatosfinal();
+
+
+
+let numeroGuardado = 96;
+
+if (numeroGuardado==8 || numeroGuardado <= 89){
+    console.log("es igual a 8");
+}else if (numeroGuardado == 100){
+    console.log("numero guardado es igual a 9");
+}else {
+    console.log("no corresponde");
+}
+while (numeroGuardado < 100) {
+    numeroGuardado = ++numeroGuardado;
+    console.log(numeroGuardado);
+}
