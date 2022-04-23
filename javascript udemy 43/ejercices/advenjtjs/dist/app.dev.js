@@ -30,8 +30,10 @@ console.log(ovejasFiltradas) */
 // [{ name: 'Navidad', color: 'rojo' },
 //  { name: 'Ki Na Ma', color: 'rojo' }]
 
+var ovejasRConA = ovejas.filter(function (ovejas) {
+  return ovejas.name.length == ["a"];
+});
 var ovejasRojas = ovejas.filter(function (ovejas) {
   return ovejas.color == "rojo";
 });
-var ovejasConLetras = ovejas.indexOf(oovejas.name == "a");
-console.log(ovejasConLetras);
+console.log(ovejasRConA); // console.log(ovejas[ovejas.match(/ain/g))];
