@@ -17,8 +17,7 @@ console.log(ovejasFiltradas) */
 
 // [{ name: 'Navidad', color: 'rojo' },
 //  { name: 'Ki Na Ma', color: 'rojo' }]
-
+let ovejasRConA = ovejas.filter(ovejas => ovejas.name.length == ["a"]);
 let ovejasRojas = ovejas.filter(ovejas => ovejas.color == "rojo");
-let ovejasConLetras = ovejas.indexOf(ovejas ovejas.name == "a")
-console.log(ovejasConLetras);
-
+console.log(ovejasRConA);
+// console.log(ovejas[ovejas.match(/ain/g))];
