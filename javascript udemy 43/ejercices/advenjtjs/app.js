@@ -17,7 +17,21 @@ console.log(ovejasFiltradas) */
 
 // [{ name: 'Navidad', color: 'rojo' },
 //  { name: 'Ki Na Ma', color: 'rojo' }]
-let ovejasRConA = ovejas.filter(ovejas => ovejas.name.length == ["a"]);
+/* let ovejasRConA = ovejas.filter(ovejas => ovejas.name = ["a"]);
 let ovejasRojas = ovejas.filter(ovejas => ovejas.color == "rojo");
-console.log(ovejasRConA);
+console.log(ovejasRConA); */
 // console.log(ovejas[ovejas.match(/ain/g))];
+
+var obejass = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+
+/**
+ * Filtra la matríz en función de un criterio de búsqueda (query)
+ */
+function filterItems(query) {
+    return ovejas.filter(function () {
+        return (query);
+    })
+}
+
+console.log(filterItems('cxcz')); // ['apple', 'grapes']
+console.log(filterItems('e'));
