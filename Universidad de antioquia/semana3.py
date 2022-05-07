@@ -7,3 +7,12 @@ for pinta in pintas:
         carta=(f"{tanto} de {pinta}")
         cartas.append(carta)
 print(f"{cartas}")
+
+#densidad = masa / volumen
+
+#para calcular la densidad
+
+masa = 7
+volumen = 5
+densidad = masa / volumen
+print(densidad)
