@@ -27,11 +27,12 @@ var obejass = ['apple', 'banana', 'grapes', 'mango', 'orange'];
 /**
  * Filtra la matríz en función de un criterio de búsqueda (query)
  */
-function filterItems(query) {
-    return ovejas.filter(function () {
-        return (query);
+const filterItems = (query) => {
+    
+    return ovejas.filter (item => {
+        return item.name.match(/na/gi)/*  && item.name.includes(query = "a")  */&& item.color == "rojo";
     })
 }
 
-console.log(filterItems('cxcz')); // ['apple', 'grapes']
-console.log(filterItems('e'));
+console.log(filterItems()); // ['apple', 'grapes']
+// console.log(filterItems('e'));
