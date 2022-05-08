@@ -36,7 +36,7 @@ for i in range(0,100+1,10):
     print(i, end=' ')
 print()
  '''
-from ast import While
+
 
 
 print('¡Bienvenido!En esta aplicacin los estudiantes podran gestionar las notas de su materia.')
@@ -48,12 +48,20 @@ notaObtenida = float(input("Ingrese la nota obtenida: "))
 
 porcentajeNota = int(input("Ingrese el porcentaje de la nota: "))
 
-contadorPorcentaje = []
+contadorPorcentaje = 0
+seleccion=input("¿Falta añadir mas notas? S/N ")    
 
-while porcentajeNota <= 100:
-    print("¿falta añadir mas notas?")
-    porcentajeNota += porcentajeNota
-print(contadorPorcentaje)
+# seleccion  = "s" , "n"
+if contadorPorcentaje <= 100:
+    seleccion
+    contadorPorcentaje += porcentajeNota
+    # print(seleccion)
+if seleccion == "s":
+    print(notaObtenida)
+    print(porcentajeNota)
+
+else :
+    print("chpelo")
     
 # print(notaObtenida)
 # print(nombreEstudiante)
