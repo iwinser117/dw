@@ -11,7 +11,7 @@ while porcentajesAcum < 100 and opcion == "s":
         porcentajeNota = int(input("Ingrese el porcentaje de la nota: "))
         notasAcum += notaObtenida
         porcentajesAcum = porcentajesAcum + porcentajeNota
-        porce_Notas += notasAcum+(porcentajesAcum)
+        porce_Notas = (notasAcum * porcentajesAcum )/ 100
         if porcentajesAcum < 100:
             opcion = input("¿Falta añadir mas notas? S/N ")
             continue
