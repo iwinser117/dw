@@ -9,16 +9,20 @@ while porcentajesAcum < 100 and opcion == "s":
     porcentajeNota = int(input("Ingrese el porcentaje de la nota: "))
     notasAcum += notaObtenida
     porcentajesAcum = porcentajesAcum + porcentajeNota
-    opcion = input("¿Falta añadir mas notas? S/N ")
+    if opcion == "s":
+        opcion = input("¿Falta añadir mas notas? S/N ")
     if opcion == "n":
         print("maracste n")
         break
     elif porcentajesAcum > 100:
+        notasAcum = notasAcum - notaObtenida
         porcentajesAcum = porcentajesAcum - porcentajeNota
         print(porcentajesAcum)
         print("el porcentaje evaluado de una materia no puede mayor a 100")
+
     elif porcentajesAcum == 100:
         print("hola mundo")
+        break
 
 
 print("es dfife")
