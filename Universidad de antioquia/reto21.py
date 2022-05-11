@@ -1,7 +1,6 @@
 print("¡Bienvenido! En esta aplicación los estudiantes podran gestionar las notas de su materia.")
 nameEstudiante = input("Por favor ingrese su nombre: ")
-# nombre = nameEstudiante.capitalize()
-nameMateria =str(input("Ingrese el nombre de la materia: "))
+nameMateria =input("Ingrese el nombre de la materia: ")
 opcion = "s"
 notasAcum = 0
 porcentajesAcum = 0
@@ -15,12 +14,14 @@ while opcion == "s":
         print("El porcentaje evaluado de una materia no puede ser mayor a 100")
         notasAcum = notasAcum - notaObtenida
         porcentajesAcum = porcentajesAcum - porcentajeNota
+        continue    
     elif porcentajesAcum == 100:
-        reportFinal = print(f"El estudiante {nombre} cursó la materia {nameMateria} ")
+        reportFinal = print(f"El estudiante {nameEstudiante.capitalize()} cursó la materia {nameMateria.capitalize()} ")
         break
     elif porcentajesAcum < 100 and opcion == "s":
-        opcion = input("¿Falta añadir mas notas? S/N ")
+        opcion = input("¿Falta añadir mas notas? S/N ").
         if opcion == "n":
             reportFinal = print(
-                f"El estudiante {nameEstudiante} cursó la materia {nameMateria} y")
-            continue
+                f"El estudiante {nameEstudiante.capitalize()} cursó la materia {nameMateria} y")
+            break
+        
