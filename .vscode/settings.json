@@ -2,11 +2,14 @@
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        "./python_CC",
+        ".",
         "-p",
-        "*_test.py"
+        "*test.py"
     ],
-    "python.testing.pytestEnabled": false,
-    "python.testing.unittestEnabled": true,
-    "compile-hero.disable-compile-files-on-did-save-code": false
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "compile-hero.disable-compile-files-on-did-save-code": false,
+    "python.testing.pytestArgs": [
+        "Universidad de antioquia"
+    ]
 }
