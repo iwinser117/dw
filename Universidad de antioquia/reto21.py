@@ -1,27 +1,17 @@
 print("¡Bienvenido! En esta aplicación los estudiantes podran gestionar las notas de su materia.")
-nameEstudiante = input("Por favor ingrese su nombre: ")
-nameMateria =input("Ingrese el nombre de la materia: ")
-opcion = "s"
-notasAcum = 0
-porcentajesAcum = 0
-while opcion == "s":
-    notaObtenida = float(input("Ingrese la nota obtenida: "))
-    porcentajeNota = float(input("Ingrese el porcentaje de la nota: "))
-    notasAcum += notaObtenida
-    porcentajesAcum += porcentajeNota
-    notaPromedio = (notasAcum * porcentajesAcum) / 100
-    if porcentajesAcum > 100:
-        print("El porcentaje evaluado de una materia no puede ser mayor a 100")
-        notasAcum = notasAcum - notaObtenida
-        porcentajesAcum = porcentajesAcum - porcentajeNota
-        continue    
-    elif porcentajesAcum == 100:
-        reportFinal = print(f"El estudiante {nameEstudiante.capitalize()} cursó la materia {nameMateria.capitalize()} ")
-        break
-    elif porcentajesAcum < 100 and opcion == "s":
-        opcion = input("¿Falta añadir mas notas? S/N ").
-        if opcion == "n":
-            reportFinal = print(
-                f"El estudiante {nameEstudiante.capitalize()} cursó la materia {nameMateria} y")
-            break
-        
+n_Estudiante = str(input("Por favor ingrese su nombre: ")).upper()
+n_Materia =str(input("Ingrese el nombre de la materia: ")).capitalize()
+notaObteTotal = 0
+notaObte = float(input("Ingrese la nota obtenida: "))
+#el porcentaje de la nota no puede ser mayor que 100 si es mayor imprimr tal cosa y retormar al paso previo 
+#si porcentaje es igual a 100 imprimir rta si  o si es menor que 100 vueve y pregunta
+porcen_Obtenido = float(input("Ingrese el porcentaje de la nota: "))
+# nota acumulada debe ser aprobada si es mayor o igual a 3  
+nota_Acum = (notaObteTotal * porcen_Obtenido)/100
+#creo variable informal
+porAcum = 0
+# 3.5 * 25 + 4.5 * 25 + 3.7 *25 + 3.3 * 25 
+    
+
+print(nota_Acum)
+print(notaObteTotal)
