@@ -1,7 +1,7 @@
-print("¡Bienvenido! En esta aplicación los estudiantes podrán gestionar las notas de su materia.")
-nameEstudiante = input("Por favor ingrese su nombre: ").upper()
-nombre = nameEstudiante
-nameMateria = input("Ingrese el nombre de la materia: ").capitalize()
+print("¡Bienvenido! En esta aplicación los estudiantes podran gestionar las notas de su materia.")
+nameEstudiante = input("Por favor ingrese su nombre: ")
+# nombre = nameEstudiante.capitalize()
+nameMateria =str(input("Ingrese el nombre de la materia: "))
 opcion = "s"
 notasAcum = 0
 porcentajesAcum = 0
