@@ -16,8 +16,7 @@ while opcion == "s":
             porcentajesAcum = porcentajesAcum - porcentajeNota
             continue
     elif porcentajesAcum == 100:
-            reportFinal = print(
-                f"El estudiante {nameEstudiante.capitalize()} cursó la materia {nameMateria.capitalize()} ")
+            reportFinal = print(f"El estudiante {nameEstudiante.capitalize()} cursó la materia {nameMateria.capitalize()} ")
             break
     elif porcentajesAcum < 100 and opcion == "s":
             opcion = input("¿Falta añadir mas notas? S/N ")
@@ -25,3 +24,4 @@ while opcion == "s":
                 reportFinal = print(
                     f"El estudiante {nameEstudiante.capitalize()} cursó la materia {nameMateria} y")
                 break
+           
