@@ -52,7 +52,7 @@ print(densidad)
 for i in range(0, 10):
     print(i, end =' ')
 print()
-for i in range(0,100+1,10):
+
     print(i, end=' ')
 print()
  '''
