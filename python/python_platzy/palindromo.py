@@ -12,7 +12,9 @@ def palindromo(palabra):
     else :
         return False
 palabra = input("Escribe la palabra")
+#se crea una variable lo que es es_palindromo
 es_palindromo = palindromo(palabra)
+#se le asigna funcion y trabaja con palabra
 if es_palindromo == True:
     print("Es palindromo")
 else :
