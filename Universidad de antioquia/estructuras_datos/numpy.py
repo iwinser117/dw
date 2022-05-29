@@ -1,10 +1,10 @@
-import numpy as np 
+import numpy
 l=[1,2, 3]
 m=[4, 5 ,6]
 
 #generando un arreglo
-arreglo=np.array([1, 2, 3])
-arreglo2=np.array([4, 5, 6])
+arreglo=numpy.array([(1, 2, 3)])
+arreglo2=numpy.array([4, 5, 6])
 
 print(f"{l}")
 print(f"{arreglo2}")
