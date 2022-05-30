@@ -1,8 +1,9 @@
 import random 
+from random import choice
 letra=["B", "I", "N", "G", "O"]
 numero_aleatorio =[]
 balotas = []
-b_mezcla = random.shuffle(balotas)
+
 #print(b_mezcla)
 for letras in letra[0]:
     for l in range(1,16):
@@ -22,6 +23,8 @@ for letras in letra[2]:
     for m in range(31, 46):
         mezcla = f"{letras}{m}"
         balotas.append(mezcla)
+        #hola = random.choice(mezcla)
+        #print(hola)
 #print(balotas)
 for letras in letra[3]:
     for l in range(46,61):
@@ -33,7 +36,9 @@ for letras in letra[4]:
         mezcla = f"{letras}{l}"
         balotas.append(mezcla)
 
-#random.shuffle(balotas)
-#print(balotas)
+random.shuffle(balotas)
+print(balotas)
 #print(f"estas son las balotas {random.shuffle(balotas)}")
-#print(balotas)
+
+balotas_minimas=(random.choices(balotas))
+print(balotas_minimas)
