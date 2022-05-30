@@ -40,5 +40,5 @@ random.shuffle(balotas)
 print(balotas)
 #print(f"estas son las balotas {random.shuffle(balotas)}")
 
-balotas_minimas=(random.choices(balotas))
+balotas_minimas = (random.choices(balotas))
 print(balotas_minimas)
