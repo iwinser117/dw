@@ -1,3 +1,6 @@
+from functools import reduce
+
+
 abc = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
        'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 mensaje = "U DE A"
@@ -16,6 +19,10 @@ print(v)
 l1=[1, 2, 3, 4]
 l2 = list(map(lambda x: x**2,l1))
 print(l2)
+
+l3 = [2, 2, 2, 2, 2]
+l4 = reduce(lambda a, b: a*b ,l3)
+print(l4)
 
 
 """def encriptar(mensaje, b):
