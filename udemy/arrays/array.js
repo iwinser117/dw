@@ -38,3 +38,23 @@ frutas.filter(fruta=>{
     }
 })
 
+//find nos busca la primera coincidencia osea todas pero nos muestra solo la primera
+/* frutas.find(fruta => {
+    if (fruta == "banana"){
+        console.log(fruta)
+    }
+}) */
+
+
+
+//metodo forEach
+//por cada elemento nos recorre el arrays
+
+frutas.forEach(fruta =>{
+    if (fruta == "banana"){
+        console.log("es una banana")
+    }else {
+        console.log("no es banana");
+    }
+    console.log(object)
+})
