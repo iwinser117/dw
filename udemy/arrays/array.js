@@ -35,19 +35,29 @@ frutas.filter(fruta=>{
     if (fruta.length > 5){
         console.log(`${fruta} tiene mas de 5 caracteres`);
     }else {
-        console.log(`${fruta} tiene menos de 5 caracteres`)
+        console.log(`${fruta} tiene menos de 5 caracteres`);
     }
 })
 
 //find nos busca la primera coincidencia osea todas pero nos muestra solo la primera
-frutas.find(fruta => {
+/* frutas.find(fruta => {
     if (fruta == "banana"){
         console.log(fruta)
     }
 })
-
+ */
 
 
 //metodo forEach
 //por cada elemento nos recorre el arrays
 
+
+    frutas.forEach(function(elemento,indice, array){
+        console.log( elemento,indice);
+    })
+let ultimo = frutas.push("naranja");
+console.log(frutas);
+let sultimo = frutas.pop();
+console.log(frutas);
+console.log(frutas.length)
+console.log(frutas.splice(1, 2, 3));
