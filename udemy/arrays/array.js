@@ -14,7 +14,8 @@ const empresa = [
         edad:5
     }
 ]
-/* console.log(empresa); */
+
+
 console.log(empresa.concat({nombre:"sandra",apellido:"donado"}))
 
 /* empresa.every(empresa => {
@@ -39,22 +40,14 @@ frutas.filter(fruta=>{
 })
 
 //find nos busca la primera coincidencia osea todas pero nos muestra solo la primera
-/* frutas.find(fruta => {
+frutas.find(fruta => {
     if (fruta == "banana"){
         console.log(fruta)
     }
-}) */
+})
 
 
 
 //metodo forEach
 //por cada elemento nos recorre el arrays
 
-frutas.forEach(fruta =>{
-    if (fruta == "banana"){
-        console.log("es una banana")
-    }else {
-        console.log("no es banana");
-    }
-    console.log(object)
-})
