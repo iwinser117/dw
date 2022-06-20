@@ -32,6 +32,5 @@ public class Ejemplo {
 
         System.out.println(salario);
         System.out.println(pension);
-        
     }
 }
