@@ -31,6 +31,7 @@ public class Ejemplo {
         var pension = salario*0.03;
 
         System.out.println(salario);
-        Systema.out.println(pension);
+        System.out.println(pension);
+        
     }
 }
