@@ -1,4 +1,4 @@
-const ovejas = [
+let ovejas = [
     { name: 'Noa', color: 'azul' },
     { name: 'Euge', color: 'rojo' },
     { name: 'Navidad', color: 'rojo' },
@@ -33,6 +33,21 @@ const filterItems = (query) => {
         return item.name.match(/na/gi)/*  && item.name.includes(query = "a")  */&& item.color == "rojo";
     })
 }
+/* let i = 10;
 
-console.log(filterItems()); // ['apple', 'grapes']
+for (let i = 10; i > 0; i--) {
+console.log(i + "hola");
+
+if (i == 1) {
+    for (i = 1; i < 10; i++){ 
+        console.log(i);
+    }
+}
+} */
+
+
+
+
+
+document.write(ovejas.name); // ['apple', 'grapes']
 // console.log(filterItems('e'));

@@ -30,10 +30,35 @@ console.log(ovejasFiltradas) */
 // [{ name: 'Navidad', color: 'rojo' },
 //  { name: 'Ki Na Ma', color: 'rojo' }]
 
-var ovejasRConA = ovejas.filter(function (ovejas) {
-  return ovejas.name.length == ["a"];
-});
-var ovejasRojas = ovejas.filter(function (ovejas) {
-  return ovejas.color == "rojo";
-});
-console.log(ovejasRConA); // console.log(ovejas[ovejas.match(/ain/g))];
+/* let ovejasRConA = ovejas.filter(ovejas => ovejas.name = ["a"]);
+let ovejasRojas = ovejas.filter(ovejas => ovejas.color == "rojo");
+console.log(ovejasRConA); */
+// console.log(ovejas[ovejas.match(/ain/g))];
+
+var obejass = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+/**
+ * Filtra la matríz en función de un criterio de búsqueda (query)
+ */
+
+var filterItems = function filterItems(query) {
+  return ovejas.filter(function (item) {
+    return item.name.match(/na/gi)
+    /*  && item.name.includes(query = "a")  */
+    && item.color == "rojo";
+  });
+};
+/* let i = 10;
+
+for (let i = 10; i > 0; i--) {
+console.log(i + "hola");
+
+if (i == 1) {
+    for (i = 1; i < 10; i++){ 
+        console.log(i);
+    }
+}
+} */
+
+
+document.write(ovejas.name); // ['apple', 'grapes']
+// console.log(filterItems('e'));
