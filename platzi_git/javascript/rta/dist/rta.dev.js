@@ -1,9 +1,10 @@
 "use strict";
 
 var lista = [1, 2, 3, 4, 5, 6];
-console.log(lista.splice(1, 3));
+lista.push(7);
+console.log(lista);
 var lista2 = "hola soy la lista dos";
-console.log(lista2);
+console.log(lista2.toUpperCase());
 var lista3 = [{
   firstName: "Iwinser",
   endName: "Aljadys"
@@ -16,4 +17,13 @@ var lista3 = [{
 }, {
   n4: "Sanchez"
 }];
+lista3.push({
+  n5: "hi",
+  n6: "dd"
+});
 console.log(lista3);
+var lista4 = {
+  nombre: "hola",
+  apellido: "mundo"
+};
+console.log(lista4.apellido);
