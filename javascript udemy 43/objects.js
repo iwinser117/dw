@@ -228,24 +228,3 @@ let arreglo = ["doctor","456233242"];
 console.log(persona7.nombre_Completo2.apply( persona8, arreglo));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
