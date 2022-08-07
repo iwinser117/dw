@@ -23,9 +23,9 @@ console.log(eArr1.next().values);
 
 const iterator1 = varios.entries();
 
-/* console.log(iterator1.next().value + "soy el primer iterator");
+console.log(iterator1.next().value + "soy el primer iterator");
 console.log(iterator1.next().value + "soy el segundo iterator");
-console.log(iterator1.next().value ); */
+console.log(iterator1.next().value );
 
 for ( let i of iterator1){
     console.log(i);

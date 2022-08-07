@@ -24,10 +24,9 @@ console.log(eArr1.next().values); //no funciona en visual code
  */
 
 var iterator1 = varios.entries();
-/* console.log(iterator1.next().value + "soy el primer iterator");
+console.log(iterator1.next().value + "soy el primer iterator");
 console.log(iterator1.next().value + "soy el segundo iterator");
-console.log(iterator1.next().value ); */
-
+console.log(iterator1.next().value);
 var _iteratorNormalCompletion = true;
 var _didIteratorError = false;
 var _iteratorError = undefined;
