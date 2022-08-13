@@ -8,7 +8,32 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <h1>aqui vamos a hacer un blogpost</h1>
-    <p>este es el parrafo de inicio</p>
+    <h1>Manipulacion del Dom basica</h1>
+    <p>este es un parrafo</p>
+
+    <p class="parrafo-class">este es un parrafo con clase</p>
+
+    <p id="pid">este parra es con id</p>
+
+    <input type="text" value="sierra117">
+    <script>
+        const h1 = document.querySelector(`h1`);
+        const p = document.querySelector("p");
+        const p_class = document.getElementsByClassName(".parrafo-class");
+        const id = document.getElementById("pid");
+        const input = document.querySelector("input");
+
+        console.log(input.value);;
+        console.log({
+            h1,
+            p,
+            p_class,
+            id,
+            input}
+        );
+
+
+        h1.innerHTML = "este es otro titulo <br> y sigue aqui";
+    </script>
 </body>
 </html>
