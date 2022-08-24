@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch frameOne",
+            "request": "launch",
+            "mainClass": "demo.frameOne",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
             "name": "Launch hola",
             "request": "launch",
             "mainClass": "hola",
