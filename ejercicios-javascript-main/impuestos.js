@@ -19,3 +19,4 @@ function calcularImpuestos(edad, ingresos){
 }
 
 calcularImpuestos(18,2000 + 6);
+console.log("hola mundo")
