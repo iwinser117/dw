@@ -18,4 +18,4 @@ function calcularImpuestos(edad, ingresos){
     }
 }
 
-calcularImpuestos(18,2000);
+calcularImpuestos(18,2000 + 6);
