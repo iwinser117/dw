@@ -34,4 +34,3 @@ myobject = {
   }
 };
 var h = Object.values(myobject);
-h;

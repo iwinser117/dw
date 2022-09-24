@@ -37,4 +37,3 @@ myobject = {
     }
 }
 let h = Object.values(myobject);
-
