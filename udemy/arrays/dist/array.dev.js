@@ -1,53 +1,37 @@
 "use strict";
 
-//array de objetos
-var empresa = [{
-  id: 0,
-  nombre: "iwinser",
-  apellidos: "sanchez",
-  edad: 27
-}, {
-  id: 1,
-  nombre: "Dylan",
-  apellidos: "sanchez",
-  edad: 5
-}];
-console.log(empresa.concat({
-  nombre: "sandra",
-  apellido: "donado"
-}));
-/* empresa.every(empresa => {
-    console.log(empresa =="sandra")
-}) */
-//some ---algunos
-//nos devuelve elemntos por elemntos si son true o false 
+var numeros = [1, 2, 3, 11, 23, 11, 321, 56];
+var letras = ["a", "b", "c", "d"];
+var diasSemana = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"]; //recorrer arrays
+//for
 
-/* empresa.some("iwinser") */
+for (i = 0; i < numeros.length; i++) {
+  console.log(numeros[i]);
+} //recorriendo con un  forEach y realizando operaciones alli mismo
 
-frutas = ["limon", "banana", "pera", "manzana", "mm"];
-frutas.filter(function (fruta) {
-  if (fruta.length > 5) {
-    console.log("".concat(fruta, " tiene mas de 5 caracteres"));
-  } else {
-    console.log("".concat(fruta, " tiene menos de 5 caracteres"));
+
+numeros.forEach(function (numero) {
+  var al2 = numero + 1;
+
+  if (al2 % 2 == 0) {
+    console.log(al2);
   }
-}); //find nos busca la primera coincidencia osea todas pero nos muestra solo la primera
+}); //añadiendo texto a la variable
 
-/* frutas.find(fruta => {
-    if (fruta == "banana"){
-        console.log(fruta)
-    }
-})
- */
-//metodo forEach
-//por cada elemento nos recorre el arrays
-
-frutas.forEach(function (elemento, indice, array) {
-  console.log(elemento, indice);
+diasSemana.forEach(function (dia) {
+  console.log("hola hoy es ".concat(dia, "\n"));
 });
-var ultimo = frutas.push("naranja");
-console.log(frutas);
-var sultimo = frutas.pop();
-console.log(frutas);
-console.log(frutas.length);
-console.log(frutas.splice(1, 2, 3));
+myobject = {
+  estudiante: {
+    nombre: "est1",
+    edad: 12,
+    nota: 4.6
+  },
+  estudiante2: {
+    nombre: "est2",
+    edad: 14,
+    nota: 4.7
+  }
+};
+var h = Object.values(myobject);
+h;

@@ -1,63 +1,40 @@
-//array de objetos
+const numeros = [1, 2, 3, 11, 23, 11, 321, 56]
+const letras = ["a", "b", "c", "d"]
+const diasSemana = ["lunes","martes","miercoles" , "jueves", "viernes", "sabado", "domingo"]
 
-const empresa = [
-    {
-        id:0,
-        nombre: "iwinser",
-        apellidos:"sanchez",
-        edad: 27
+
+
+//recorrer arrays
+//for
+for(i = 0; i<numeros.length; i++){
+    console.log(numeros[i]);
+}
+
+//recorriendo con un  forEach y realizando operaciones alli mismo
+numeros.forEach(numero => {
+    const al2 = numero+1;
+    if (al2 % 2 == 0){
+        console.log(al2)
+    }
+});
+
+//añadiendo texto a la variable
+diasSemana.forEach(dia =>{
+    console.log(`hola hoy es ${dia}\n`);
+})
+
+myobject = {
+      estudiante : {
+        nombre:"est1",
+        edad:12,
+        nota: 4.6
     },
-    {
-        id:1,
-        nombre:"Dylan",
-        apellidos: "sanchez",
-        edad:5
+    
+    estudiante2 : {
+        nombre: "est2",
+        edad: 14,
+        nota: 4.7
     }
-]
-
-
-console.log(empresa.concat({nombre:"sandra",apellido:"donado"}))
-
-/* empresa.every(empresa => {
-    console.log(empresa =="sandra")
-}) */
-
-
-//some ---algunos
-//nos devuelve elemntos por elemntos si son true o false 
-
-/* empresa.some("iwinser") */
-
-
-frutas = ["limon", "banana", "pera", "manzana", "mm"]
-
-frutas.filter(fruta=>{
-    if (fruta.length > 5){
-        console.log(`${fruta} tiene mas de 5 caracteres`);
-    }else {
-        console.log(`${fruta} tiene menos de 5 caracteres`);
-    }
-})
-
-//find nos busca la primera coincidencia osea todas pero nos muestra solo la primera
-/* frutas.find(fruta => {
-    if (fruta == "banana"){
-        console.log(fruta)
-    }
-})
- */
-
-
-//metodo forEach
-//por cada elemento nos recorre el arrays
-
-
-    frutas.forEach(function(elemento,indice, array){
-        console.log( elemento,indice);
-    })
-let ultimo = frutas.push("naranja");
-console.log(frutas);
-let sultimo = frutas.pop();
-console.log(frutas);
-console.log(frutas.length)
-console.log(frutas.splice(1, 2, 3));
+}
+let h = Object.values(myobject);
+h
