@@ -4,7 +4,7 @@ const diasSemana = ["lunes","martes","miercoles" , "jueves", "viernes", "sabado"
 const names = ["a", "b","c", "d"]
 console.log(names.splice(1,3) )
 console.log(names)
-
+numeros.map()
 
 const suma = (acumulador, curr)=>acumulador + curr;
 console.log(numeros.reduce(suma));

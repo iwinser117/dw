@@ -2,7 +2,16 @@
 
 var numeros = [1, 2, 3, 11, 23, 11, 321, 56];
 var letras = ["a", "b", "c", "d"];
-var diasSemana = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"]; //recorrer arrays
+var diasSemana = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"];
+var names = ["a", "b", "c", "d"];
+console.log(names.splice(1, 3));
+console.log(names);
+
+var suma = function suma(acumulador, curr) {
+  return acumulador + curr;
+};
+
+console.log(numeros.reduce(suma)); //recorrer arrays
 //for
 
 for (i = 0; i < numeros.length; i++) {
