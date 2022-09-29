@@ -33,4 +33,3 @@ myobject = {
     nota: 4.7
   }
 };
-var h = Object.values(myobject);

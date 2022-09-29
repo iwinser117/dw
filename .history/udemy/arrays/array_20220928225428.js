@@ -36,3 +36,5 @@ myobject = {
         nota: 4.7
     }
 }
+let h = Object.values(myobject);
+
