@@ -26,7 +26,7 @@ function multiplicar(){
     let resultadoMultiplicar = parseInt(operandoA.value) * parseInt(operandoB.value);
     if (isNaN(resultadoMultiplicar))
         resultadoMultiplicar = `la operacion le faltan numeros`;
-    document.getElementById(`resultadoMultiplicar`).innerHTML = `resultado de la multiplicacion es : ${resultadoMultiplicar}`;
+    document.getElementById(`resultadoMultiplicar`).innerHTML = `resultado de la multiplicacion es : ${resultadoResta}`;
     console.log(`resultado de la multiplicacion es : ${resultadoMultiplicar}`);
 }
 
@@ -34,6 +34,6 @@ function dividir(){
     let resultadoDivision= parseInt(operandoA.value) / parseInt(operandoB.value);
     if (isNaN(resultadoDivision))
         resultadoDivision = `la operacion le faltan numeros`;
-    document.getElementById(`resultadoDivision`).innerHTML = `resultado de la division es : ${resultadoDivision}`;
+    document.getElementById(`resultadoDivision`).innerHTML = `resultado de la division es : ${resultadoResta}`;
     console.log(`resultado de la division es : ${resultadoDivision}`);
 }
