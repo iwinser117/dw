@@ -21,6 +21,7 @@ console.log(eArr1.next().values);
  * y nos muestra el indice y su contenido
  */
 
+/*
 const iterator1 = varios.entries();
 
 console.log(iterator1.next().value + "soy el primer iterator");
@@ -30,3 +31,6 @@ console.log(iterator1.next().value );
 for ( let i of iterator1){
     console.log(i);
 }
+*/
+
+
