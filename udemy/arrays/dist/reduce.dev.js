@@ -7,6 +7,9 @@ console.log(numeros.reduce(function (a, b) {
   return a - b;
 })); //da como resultado -23 igual se le puede asugnar una arrow function
 
+console.log(numeros.reduce(function (a, b) {
+  return a + b;
+}, "elresultado de la suma  es: "));
 console.log(numeros.reduce(suma)); //da como resultado 27al sumar cada item
 
 function suma(a, b) {
