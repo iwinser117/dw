@@ -1,10 +1,17 @@
 const numeros = [1, 2, 3, 11, 23, 11, 321, 56]
-const letras = ["a", "b", "c", "d"]
+const letras = ["a", "b", "c", "a", "d"]
 const diasSemana = ["lunes","martes","miercoles" , "jueves", "viernes", "sabado", "domingo"]
 const names = ["a", "b","c", "d"]
 console.log(names.splice(1,3) )
 console.log(names)
 
+console.log(letras.forEach((letra)=> {
+    if (letra == "a") {
+        console.log("es igula a A")
+    }else{
+        console.log(letra)
+    }
+}));
 
 const suma = (acumulador, curr)=>acumulador + curr;
 console.log(numeros.reduce(suma));

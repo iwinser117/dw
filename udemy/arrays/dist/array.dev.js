@@ -1,11 +1,18 @@
 "use strict";
 
 var numeros = [1, 2, 3, 11, 23, 11, 321, 56];
-var letras = ["a", "b", "c", "d"];
+var letras = ["a", "b", "c", "a", "d"];
 var diasSemana = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"];
 var names = ["a", "b", "c", "d"];
 console.log(names.splice(1, 3));
 console.log(names);
+console.log(letras.forEach(function (letra) {
+  if (letra == "a") {
+    console.log("es igula a A");
+  } else {
+    console.log(letra);
+  }
+}));
 
 var suma = function suma(acumulador, curr) {
   return acumulador + curr;
