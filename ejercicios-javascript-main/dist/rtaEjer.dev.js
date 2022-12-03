@@ -92,22 +92,65 @@ Si el número es menor a 1000 se debe devolver el mismo número como un string.
 function like(nLikes) {
   /* lo convierto a estring para saber la cantidad con la que estoy trabajando */
   var nString = nLikes.toString();
-  console.log(nString.length);
 
   if (nString.length <= 3) {
     return console.log("tienes ".concat(nString, " seguidores"));
   }
 
   if (nString.length <= 6) {
-    console.log(nString.slice(0, -3));
     return console.log("tienes ".concat(nString.slice(0, -3), "k de seguidores"));
   }
 
   if (nString.length >= 7) {
-    console.log(nString.slice(0, -5));
-    return console.log("tienes ".concat(nString.slice(0, -5), "M de seguidores"));
+    return console.log("tienes ".concat(nString.slice(0, -6), "M de seguidores"));
   }
 }
 
-like(1000);
-like(1345672);
+like(798);
+like(1900);
+like(54000);
+like(120800);
+like(5222444);
+/* 
+## 6. FizzBuzz
+
+Escribir una función llamada `fizzBuzz` que reciba un número y retorne un string de acuerdo a lo siguiente:
+
+* "fizz" si el número es múltiplo de 3.
+* "buzz" si el número es múltiplo de 5.
+* "fizzbuzz" si el número es múltiplo tanto de 3 como de 5.
+* Si no cumple ninguna de las condiciones anteriores debe retornar el mismo número.
+
+```javascript
+// escribe tu respuesta acá
+
+// código de prueba
+console.log(fizzBuzz(6)); // "fizz"
+console.log(fizzBuzz(20)); // "buzz"
+console.log(fizzBuzz(30)); // "fizzbuzz"
+console.log(fizzBuzz(8)); // 8
+``` */
+
+function fizzBuzz(n) {
+  var f3 = n % 3;
+  var f5 = n % 5;
+  console.log(f5);
+
+  if (f3 == 0 && f5 == 0) {
+    return 'fizzbuzz';
+  } else if (f3 == 0) {
+    return 'fizz';
+  } else if (f5 == 0) {
+    return 'buzz';
+  } else {
+    return n;
+  }
+}
+
+console.log(fizzBuzz(6)); // "fizz"
+
+console.log(fizzBuzz(20)); // "buzz"
+
+console.log(fizzBuzz(30)); // "fizzbuzz"
+
+console.log(fizzBuzz(8));
