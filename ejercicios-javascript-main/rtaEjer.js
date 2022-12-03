@@ -141,7 +141,7 @@ function fizzBuzz(n){
     }
 }
 
-console.log(fizzBuzz(6)); // "fizz"
-console.log(fizzBuzz(20)); // "buzz"
-console.log(fizzBuzz(30)); // "fizzbuzz"
+console.log(fizzBuzz(6)); 
+console.log(fizzBuzz(20));
+console.log(fizzBuzz(30));
 console.log(fizzBuzz(8)); 
