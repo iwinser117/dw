@@ -40,3 +40,30 @@ console.log(bmi(65, 1.8))
 console.log(bmi(72, 1.6)) 
 console.log(bmi(52, 1.75)) 
 console.log(bmi(135, 1.7))
+
+/* 
+## 4. Imprimir un arreglo
+
+Escribir una función llamada `imprimirArreglo` que reciba un arreglo e imprima cada elemento en una línea a parte:
+
+```javascript
+// escribe tu respuesta acá
+
+// código de prueba
+console.log(imprimirArreglo(1, "Hola", 2, "Mundo"))
+// 1
+// Hola
+// 2
+// Mundo
+``` */
+let otroarray = [1, "Hola", 2, "Mundo", [1, "Hola", 2,[1, "Hola", 2, "Mundo"] ,"Mundo"]]
+let miArray= [1, "Hola", 2, "Mundo"]
+function imprimiArreglo(array){
+    let plano = array.flat(3);
+    console.log(plano);
+    for (let i=0; i<plano.length ;i++){
+        
+        console.log( `${plano[i]}`)
+    }    
+}
+imprimiArreglo(miArray)
