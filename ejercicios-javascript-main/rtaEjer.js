@@ -67,3 +67,37 @@ function imprimiArreglo(array){
     }    
 }
 imprimiArreglo(miArray)
+
+
+/* ## 5. Número de Likes
+
+Escribe una función llamada `likes` que reciba un número y retorne un string utilizando el formato de K para miles y M para millones.
+
+Por ejemplo:
+
+* 1400 se convierte en 1K
+* 34,567 se convierte en 34K
+* 7’456,345 se convierte en 7M.
+
+Si el número es menor a 1000 se debe devolver el mismo número como un string.
+ */
+
+function like (nLikes){
+    /* lo convierto a estring para saber la cantidad con la que estoy trabajando */
+    let nString = nLikes.toString();
+    console.log(nString.length)
+    if(nString.length <=3){
+        return console.log(`tienes ${nString} seguidores`)
+    }
+    if(nString.length <= 6){
+        console.log(nString.slice(0, -3))
+        return console.log(`tienes ${nString.slice(0,-3)}k de seguidores`)
+    }
+    if(nString.length >= 7){
+        console.log(nString.slice(0, -5))
+        return console.log(`tienes ${nString.slice(0,-5)}M de seguidores`)
+    }
+
+}
+like(1000)
+like(1345672)
