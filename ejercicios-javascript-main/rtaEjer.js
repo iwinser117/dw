@@ -172,5 +172,5 @@ function contarRango(n1, n2){
 }
 console.log(contarRango(1, 9)) // 7
 console.log(contarRango(1332, 8743)) // 7410
-console.log(contarRango(5, 6)) 
+console.log(contarRango(3, 6)) 
 console.log(contarRango(6, 4)) 
