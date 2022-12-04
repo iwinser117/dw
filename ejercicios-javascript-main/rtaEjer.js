@@ -173,4 +173,43 @@ function contarRango(n1, n2){
 console.log(contarRango(1, 9)) // 7
 console.log(contarRango(1332, 8743)) // 7410
 console.log(contarRango(3, 6)) 
-console.log(contarRango(6, 4)) 
+console.log(contarRango(5, 6)) 
+
+
+/* 
+## 8. Sumar rango de números
+
+Escribir una función llamada `sumarRango` que reciba dos argumentos: número inicial y número final. La función debe retornar la suma de los números en ese rango (incluyéndolos).
+
+**Nota:** puedes asumir que el número inicial va a ser menor o igual que el número final.
+
+```javascript
+// escribe tu respuesta acá
+
+// código de prueba
+console.log(sumarRango(0, 10)) // 55
+console.log(sumarRango(12, 14)) // 39
+console.log(sumarRango(5, 5)) // 0
+``` */
+
+function sumarRango(n1, n2){
+    let acumulador = n1;
+    let sumAcum = 0;
+    if(n1 < n2){
+        for(let i = acumulador; i < n2; i++){
+            acumulador = i;
+            console.log(acumulador);
+            sumAcum += acumulador;
+            console.log(sumAcum);
+            /* sum = n1 + acumulador + n2;
+            console.log(sum) */
+        }
+        return sumAcum + n2
+    }
+    return sumAcum
+}
+console.log(sumarRango(0, 10)) // 55
+console.log(sumarRango(12, 14)) // 39
+console.log(sumarRango(5, 5)) // 0
+
+
