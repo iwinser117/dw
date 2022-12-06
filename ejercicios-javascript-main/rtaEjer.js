@@ -213,3 +213,30 @@ console.log(sumarRango(12, 14)) // 39
 console.log(sumarRango(5, 5)) // 0
 
 
+
+
+
+/* ## 10. Número de caracteres
+
+Escribir una función llamada `numeroDeCaracteres` que reciba un string y un caracter (un string de un caracter). La función debe retornar el número de veces que aparece el caracter en el string.
+
+console.log(numeroDeCaracteres("Hola Mundo", "o")) // 2
+console.log(numeroDeCaracteres("MMMMM", "m")) // 0
+console.log(numeroDeCaracteres("eeee", e)) // 4
+``` */
+
+function numeroDeCaracteres(string, caracter){
+    let count = 0;
+    for(letra of string){
+        if(letra == caracter){
+            count++
+        }       
+         
+    }
+    console.log(`el caracter ${caracter}, se repite ${count} veces`)
+}
+
+numeroDeCaracteres("casa","a")
+numeroDeCaracteres("Hola Mundo", "o") // 2
+numeroDeCaracteres("MMMMM", "m") // 0
+numeroDeCaracteres("eeee", "e") // 4

@@ -221,3 +221,51 @@ console.log(sumarRango(0, 10)); // 55
 console.log(sumarRango(12, 14)); // 39
 
 console.log(sumarRango(5, 5)); // 0
+
+/* ## 10. Número de caracteres
+
+Escribir una función llamada `numeroDeCaracteres` que reciba un string y un caracter (un string de un caracter). La función debe retornar el número de veces que aparece el caracter en el string.
+
+console.log(numeroDeCaracteres("Hola Mundo", "o")) // 2
+console.log(numeroDeCaracteres("MMMMM", "m")) // 0
+console.log(numeroDeCaracteres("eeee", e)) // 4
+``` */
+
+function numeroDeCaracteres(string, caracter) {
+  var count = 0;
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = string[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      letra = _step.value;
+
+      if (letra == caracter) {
+        count++;
+      }
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+        _iterator["return"]();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  console.log("el caracter ".concat(caracter, ", se repite ").concat(count, " veces"));
+}
+
+numeroDeCaracteres("casa", "a");
+numeroDeCaracteres("Hola Mundo", "o"); // 2
+
+numeroDeCaracteres("MMMMM", "m"); // 0
+
+numeroDeCaracteres("eeee", "e"); // 4
