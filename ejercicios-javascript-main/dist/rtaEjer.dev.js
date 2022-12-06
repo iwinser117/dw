@@ -137,11 +137,11 @@ function fizzBuzz(n) {
   console.log(f5);
 
   if (f3 == 0 && f5 == 0) {
-    return 'fizzbuzz';
+    return "fizzbuzz";
   } else if (f3 == 0) {
-    return 'fizz';
+    return "fizz";
   } else if (f5 == 0) {
-    return 'buzz';
+    return "buzz";
   } else {
     return n;
   }
@@ -207,7 +207,7 @@ function sumarRango(n1, n2) {
       sumAcum += acumulador;
       console.log(sumAcum);
       /* sum = n1 + acumulador + n2;
-      console.log(sum) */
+            console.log(sum) */
     }
 
     return sumAcum + n2;
@@ -293,3 +293,28 @@ console.log(sumarArreglo([3, 1, 2])); // 6
 console.log(sumarArreglo([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // 55
 
 console.log(sumarArreglo([])); // 0
+
+/* ## 12. Multiplicar arreglo
+
+Escribir una función llamada `multiplicarArreglo` que reciba un arreglo de números y retorne la multiplicación de todos los elementos.
+ */
+
+function multiplicarArreglo(array) {
+  var acum = 1;
+
+  for (var i = 0; i < array.length; i++) {
+    reMul = acum * array[i];
+    console.log(reMul);
+    acum = reMul;
+    console.log(acum);
+  }
+
+  return acum;
+} // código de prueba
+
+
+console.log(multiplicarArreglo([4, 1, 2, 3])); // 24
+
+console.log(multiplicarArreglo([1, 2, 3, 4, 5, 6, 7, 8])); // 40320
+
+console.log(multiplicarArreglo([])); // 1

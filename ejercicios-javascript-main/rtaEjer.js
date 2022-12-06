@@ -21,25 +21,25 @@ console.log(bmi(135, 1.7)) // "Obeso" */
 
 let peso = 0;
 let altura = 0;
-function bmi(peso, altura){
-    const rsta = peso / (altura ** 2)
-    if (rsta < 18.5 ){
-        return "Bajo de peso";
-    }
-    if (rsta >= 18.5 && rsta<= 24.9){
-        return "Normal";
-    }
-    if (rsta >= 25 && rsta <= 29.9){
-        return "Sobrepeso";
-    }
-    if (rsta >= 30 ){
-        return "Obeso";
-    }
+function bmi(peso, altura) {
+  const rsta = peso / altura ** 2;
+  if (rsta < 18.5) {
+    return "Bajo de peso";
+  }
+  if (rsta >= 18.5 && rsta <= 24.9) {
+    return "Normal";
+  }
+  if (rsta >= 25 && rsta <= 29.9) {
+    return "Sobrepeso";
+  }
+  if (rsta >= 30) {
+    return "Obeso";
+  }
 }
-console.log(bmi(65, 1.8))
-console.log(bmi(72, 1.6)) 
-console.log(bmi(52, 1.75)) 
-console.log(bmi(135, 1.7))
+console.log(bmi(65, 1.8));
+console.log(bmi(72, 1.6));
+console.log(bmi(52, 1.75));
+console.log(bmi(135, 1.7));
 
 /* 
 ## 4. Imprimir un arreglo
@@ -56,18 +56,22 @@ console.log(imprimirArreglo(1, "Hola", 2, "Mundo"))
 // 2
 // Mundo
 ``` */
-let otroarray = [1, "Hola", 2, "Mundo", [1, "Hola", 2,[1, "Hola", 2, "Mundo"] ,"Mundo"]]
-let miArray= [1, "Hola", 2, "Mundo"]
-function imprimiArreglo(array){
-    let plano = array.flat(3);
-    console.log(plano);
-    for (let i=0; i<plano.length ;i++){
-        
-        console.log( `${plano[i]}`)
-    }    
+let otroarray = [
+  1,
+  "Hola",
+  2,
+  "Mundo",
+  [1, "Hola", 2, [1, "Hola", 2, "Mundo"], "Mundo"],
+];
+let miArray = [1, "Hola", 2, "Mundo"];
+function imprimiArreglo(array) {
+  let plano = array.flat(3);
+  console.log(plano);
+  for (let i = 0; i < plano.length; i++) {
+    console.log(`${plano[i]}`);
+  }
 }
-imprimiArreglo(miArray)
-
+imprimiArreglo(miArray);
 
 /* ## 5. Número de Likes
 
@@ -82,26 +86,24 @@ Por ejemplo:
 Si el número es menor a 1000 se debe devolver el mismo número como un string.
  */
 
-function like (nLikes){
-    /* lo convierto a estring para saber la cantidad con la que estoy trabajando */
-    let nString = nLikes.toString();
-    if(nString.length <=3){
-        return console.log(`tienes ${nString} seguidores`)
-    }
-    if(nString.length <= 6){
-        return console.log(`tienes ${nString.slice(0,-3)}k de seguidores`)
-    }
-    if(nString.length >= 7){
-       
-        return console.log(`tienes ${nString.slice(0,-6)}M de seguidores`)
-    }
-
+function like(nLikes) {
+  /* lo convierto a estring para saber la cantidad con la que estoy trabajando */
+  let nString = nLikes.toString();
+  if (nString.length <= 3) {
+    return console.log(`tienes ${nString} seguidores`);
+  }
+  if (nString.length <= 6) {
+    return console.log(`tienes ${nString.slice(0, -3)}k de seguidores`);
+  }
+  if (nString.length >= 7) {
+    return console.log(`tienes ${nString.slice(0, -6)}M de seguidores`);
+  }
 }
-like(798)
-like(1900)
-like(54000)
-like(120800)
-like(5222444) 
+like(798);
+like(1900);
+like(54000);
+like(120800);
+like(5222444);
 
 /* 
 ## 6. FizzBuzz
@@ -122,30 +124,26 @@ console.log(fizzBuzz(20)); // "buzz"
 console.log(fizzBuzz(30)); // "fizzbuzz"
 console.log(fizzBuzz(8)); // 8
 ``` */
-function fizzBuzz(n){
-    let f3 = n % 3;
-    let f5 = n % 5;
-    console.log(f5)
-    
-    if(f3 == 0 && f5 == 0){
-        return ('fizzbuzz')
-    }
-    else if(f3 == 0){
-        return ('fizz')
-    }
-    else if(f5 == 0){
-        return ('buzz') 
-    }
-    else{
-        return n;
-    }
+function fizzBuzz(n) {
+  let f3 = n % 3;
+  let f5 = n % 5;
+  console.log(f5);
+
+  if (f3 == 0 && f5 == 0) {
+    return "fizzbuzz";
+  } else if (f3 == 0) {
+    return "fizz";
+  } else if (f5 == 0) {
+    return "buzz";
+  } else {
+    return n;
+  }
 }
 
-console.log(fizzBuzz(6)); 
+console.log(fizzBuzz(6));
 console.log(fizzBuzz(20));
 console.log(fizzBuzz(30));
-console.log(fizzBuzz(8)); 
-
+console.log(fizzBuzz(8));
 
 /* ## 7. Contar rango de números
 
@@ -161,20 +159,17 @@ console.log(contarRango(1, 9)) // 7
 console.log(contarRango(1332, 8743)) // 7410
 console.log(contarRango(5, 6)) // 0
 ``` */
-function contarRango(n1, n2){
-    if(n1 < n2 ){
-        return (n2 - n1)-1;
-    }
-    else {
-        return (n1 - n2)-1;
-    }
-    
+function contarRango(n1, n2) {
+  if (n1 < n2) {
+    return n2 - n1 - 1;
+  } else {
+    return n1 - n2 - 1;
+  }
 }
-console.log(contarRango(1, 9)) // 7
-console.log(contarRango(1332, 8743)) // 7410
-console.log(contarRango(3, 6)) 
-console.log(contarRango(5, 6)) 
-
+console.log(contarRango(1, 9)); // 7
+console.log(contarRango(1332, 8743)); // 7410
+console.log(contarRango(3, 6));
+console.log(contarRango(5, 6));
 
 /* 
 ## 8. Sumar rango de números
@@ -192,29 +187,25 @@ console.log(sumarRango(12, 14)) // 39
 console.log(sumarRango(5, 5)) // 0
 ``` */
 
-function sumarRango(n1, n2){
-    let acumulador = n1;
-    let sumAcum = 0;
-    if(n1 < n2){
-        for(let i = acumulador; i < n2; i++){
-            acumulador = i;
-            console.log(acumulador);
-            sumAcum += acumulador;
-            console.log(sumAcum);
-            /* sum = n1 + acumulador + n2;
+function sumarRango(n1, n2) {
+  let acumulador = n1;
+  let sumAcum = 0;
+  if (n1 < n2) {
+    for (let i = acumulador; i < n2; i++) {
+      acumulador = i;
+      console.log(acumulador);
+      sumAcum += acumulador;
+      console.log(sumAcum);
+      /* sum = n1 + acumulador + n2;
             console.log(sum) */
-        }
-        return sumAcum + n2
     }
-    return sumAcum
+    return sumAcum + n2;
+  }
+  return sumAcum;
 }
-console.log(sumarRango(0, 10)) // 55
-console.log(sumarRango(12, 14)) // 39
-console.log(sumarRango(5, 5)) // 0
-
-
-
-
+console.log(sumarRango(0, 10)); // 55
+console.log(sumarRango(12, 14)); // 39
+console.log(sumarRango(5, 5)); // 0
 
 /* ## 10. Número de caracteres
 
@@ -225,21 +216,20 @@ console.log(numeroDeCaracteres("MMMMM", "m")) // 0
 console.log(numeroDeCaracteres("eeee", e)) // 4
 ``` */
 
-function numeroDeCaracteres(string, caracter){
-    let count = 0;
-    for(letra of string){
-        if(letra == caracter){
-            count++
-        }       
-         
+function numeroDeCaracteres(string, caracter) {
+  let count = 0;
+  for (letra of string) {
+    if (letra == caracter) {
+      count++;
     }
-    console.log(`el caracter ${caracter}, se repite ${count} veces`)
+  }
+  console.log(`el caracter ${caracter}, se repite ${count} veces`);
 }
 
-numeroDeCaracteres("casa","a")
-numeroDeCaracteres("Hola Mundo", "o") // 2
-numeroDeCaracteres("MMMMM", "m") // 0
-numeroDeCaracteres("eeee", "e") // 4
+numeroDeCaracteres("casa", "a");
+numeroDeCaracteres("Hola Mundo", "o"); // 2
+numeroDeCaracteres("MMMMM", "m"); // 0
+numeroDeCaracteres("eeee", "e"); // 4
 
 /* 
 ## 11. Sumar arreglo
@@ -247,15 +237,34 @@ numeroDeCaracteres("eeee", "e") // 4
 Escribir una función llamada `sumarArreglo` que reciba un arreglo de números y retorne la suma de todos los elementos.
 */
 // escribe tu respuesta acá
-function sumarArreglo(arreglo){
-    let acum = 0;
-    for(let i = 0; i < arreglo.length; i++){
-        acum += arreglo[i];
+function sumarArreglo(arreglo) {
+  let acum = 0;
+  for (let i = 0; i < arreglo.length; i++) {
+    acum += arreglo[i];
+  }
+  return acum;
+}
+// código de prueba
+console.log(sumarArreglo([3, 1, 2])); // 6
+console.log(sumarArreglo([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // 55
+console.log(sumarArreglo([])); // 0
+
+/* ## 12. Multiplicar arreglo
+
+Escribir una función llamada `multiplicarArreglo` que reciba un arreglo de números y retorne la multiplicación de todos los elementos.
+ */
+function multiplicarArreglo(array) {
+    let acum = 1;
+    
+    for (let i = 0; i < array.length; i++) {
+        reMul = acum * array[i];
+        console.log(reMul);
+        acum = reMul;
+        console.log(acum);
     }
     return acum;
 }
 // código de prueba
-console.log(sumarArreglo([3, 1, 2])) // 6
-console.log(sumarArreglo([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) // 55
-console.log(sumarArreglo([])) // 0
- 
+console.log(multiplicarArreglo([4, 1, 2, 3])); // 24
+console.log(multiplicarArreglo([1, 2, 3, 4, 5, 6, 7, 8])); // 40320
+console.log(multiplicarArreglo([])); // 1
