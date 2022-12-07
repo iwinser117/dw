@@ -17,7 +17,7 @@ const main = async () => {
         species: character.species,
       };
     }).map((personaje)=> Object.values(personaje).join(",")).join("\n"); 
-    
+    //para agregar a la dirname y listo las comillas son el detalle
     await fs.writeFile(path.join(__dirname,"data.csv"), characters);
     console.log(__dirname,'data.csv');
   console.log(characters);
