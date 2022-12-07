@@ -1,0 +1,14 @@
+{
+  "name": "consumirrickapi",
+  "version": "1.0.0",
+  "description": "voy a realizar el crdu de api rick y morty",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "iwinser sanchez <iwinser.sanchez47@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.2.1"
+  }
+}
