@@ -1,22 +1,48 @@
 /* const API = "https://jsonplaceholder.typicode.com"; */
 
-const d1 = fetch("https://jsonplaceholder.typicode.com/posts");
+const API = "https://jsonplaceholder.typicode.com/posts";
+
+async function fetchData(urlApi) {
+  const response = await fetch(urlApi);
+  const data = await response.json();
+  return data;
+}
+const arr = [];
+(async () => {
+  try {
+    const date = await fetchData(API);
+    console.log(date[1].title)
+    return date;
+  } catch (err) {
+    console.log("error en anonima nooooooo");
+  }
+})();
+
+
+
+/* const arr = []
+setTimeout(()=>{
+    console.log(arr)
+},1000) */
+
+/* 
 const arrVacio = [];
-d1.then((res) => res.json())
+d1
+.then((res) => res.json())
   .then(posts => {
     arrVacio.push(posts);
-      console.log(posts[3])
     return posts;
   })
   .catch((err) => console.error("ha ocuurido un erros en post"));
 
+async function imprimeArrat(array){
+     if(array.length ! = 0){
+        await console.log(array)
+    }
+}
+imprimeArrat(arrVacio) */
 
-
-setTimeout(() => {
-    console.log(arrVacio[0][4].body)
-},2000)
-
-  /* 
+/* 
 fetchData(`${API}/users`)
   .then((response) => response.json())
   .then((users) => {
