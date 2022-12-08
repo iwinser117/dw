@@ -254,21 +254,20 @@ console.log(sumarArreglo([])); // 0
 Escribir una función llamada `multiplicarArreglo` que reciba un arreglo de números y retorne la multiplicación de todos los elementos.
  */
 function multiplicarArreglo(array) {
-    let acum = 1;
-    
-    for (let i = 0; i < array.length; i++) {
-        reMul = acum * array[i];
-        console.log(reMul);
-        acum = reMul;
-        console.log(acum);
-    }
-    return acum;
+  let acum = 1;
+
+  for (let i = 0; i < array.length; i++) {
+    reMul = acum * array[i];
+    console.log(reMul);
+    acum = reMul;
+    console.log(acum);
+  }
+  return acum;
 }
 // código de prueba
 console.log(multiplicarArreglo([4, 1, 2, 3])); // 24
 console.log(multiplicarArreglo([1, 2, 3, 4, 5, 6, 7, 8])); // 40320
 console.log(multiplicarArreglo([])); // 1
-
 
 /* ## 13. Remover ceros
 
@@ -277,20 +276,20 @@ Escribir una función llamada `removerCeros` que reciba un arreglo de números y
 ```javascript
 // escribe tu respuesta acá */
 function removerCeros(array) {
-    let sinCero = [];
-    let n = 0;
-    for (let i = 0; i < array.length; i++) {
-        if(array[i] != 0) {
-            n = array[i];
-            sinCero.push(n)
-        }
+  let sinCero = [];
+  let n = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] != 0) {
+      n = array[i];
+      sinCero.push(n);
     }
-    return sinCero;
+  }
+  return sinCero;
 }
 // código de prueba
-console.log(removerCeros([0, 1, 0, 2, 0, 3])) // [1, 2, 3]
-console.log(removerCeros([9, 3, 6, 4])) // [9, 3, 6, 4]
-console.log(removerCeros([0, 0, 0])) // []
+console.log(removerCeros([0, 1, 0, 2, 0, 3])); // [1, 2, 3]
+console.log(removerCeros([9, 3, 6, 4])); // [9, 3, 6, 4]
+console.log(removerCeros([0, 0, 0])); // []
 
 /* ## 14. Sumar arreglo entre el rango
 
@@ -301,24 +300,68 @@ Escribir una función llamada `sumarArreglo` que reciba tres argumentos: un arre
 ```javascript
 // escribe tu respuesta acá
 */
-function sumarArregloEntre(arreglo,a,b) {
-    let acum = arreglo[a];
-    console.log(arreglo[a])
-    console.log(arreglo[b])
-    console.log(a)
-    if(a < b){
-        for (let i = arreglo[a]; i < arreglo[b]; i++) {
-            console.log(arreglo[i])    
-            acum += arreglo[i];
-            console.log(acum);
-        }
-    }else{
-        acum = 0;
+function sumarArregloEntre(arreglo, a, b) {
+  let acum = arreglo[a];
+  console.log(arreglo[a]);
+  console.log(arreglo[b]);
+  console.log(a);
+  if (a < b) {
+    for (let i = arreglo[a]; i < arreglo[b]; i++) {
+      console.log(arreglo[i]);
+      acum += arreglo[i];
+      console.log(acum);
     }
-    
-    return acum
+  } else {
+    acum = 0;
+  }
+
+  return acum;
 }
 // código de prueba
-console.log(sumarArregloEntre([1, 2, 3], 1, 2)) // 5
- console.log(sumarArregloEntre([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3, 6)) // 22
-console.log(sumarArregloEntre([7, 8, 9], 0, 0))  // 0
+console.log(sumarArregloEntre([1, 2, 3], 1, 2)); // 5
+console.log(sumarArregloEntre([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3, 6)); // 22
+console.log(sumarArregloEntre([7, 8, 9], 0, 0)); // 0
+
+/* ## 15. Transcribir ADN a ARN
+
+Escribir una función llamada `transcribir` que reciba un string (una cadena de ADN) y retorne otro string (su complemento ARN).
+
+Los complementos son los siguientes:
+
+* G -> C
+* C -> G
+* T -> A
+* A -> U */
+
+function transcribir(cadena) {
+  
+  let arrCad = Array.from(cadena);
+  
+  for(let letra = 0; letra < arrCad.length; letra++){
+    console.log(arrCad)
+    if (arrCad[letra]=== 'G') {
+      arrCad[letra] = 'C'
+      console.log(arrCad[letra])
+      
+    }
+    else if(arrCad[letra] === 'C') {
+      arrCad[letra] = 'G';
+      console.log(arrCad[letra])
+      
+    }
+    if (arrCad[letra] === 'T') {
+      arrCad[letra] = 'A';
+      console.log(arrCad[letra])
+      
+    }
+    else if (arrCad[letra] === 'A') {
+      arrCad[letra] = 'U';
+      console.log(arrCad[letra])
+  }
+}return arrCad.join("")
+}; 
+
+
+// código de prueba
+console.log(transcribir("ACGT")); // "UGCA"
+console.log(transcribir("ACGTGGTCTTAA")); // "UGCACCAGAAUU"
