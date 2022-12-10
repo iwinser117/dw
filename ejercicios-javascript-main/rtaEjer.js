@@ -367,10 +367,26 @@ Escribir una función llamada `capitalizar` que reciba un string y capitalice la
 ```javascript
 // escribe tu función acá
 */
-const capitalizar = (cadena) => cadena != "" ? cadena[0].toUpperCase() + cadena.substring(1) : "";
+const capitalizar = (cadena) => cadena != "" ? cadena[0].toUpperCase() + cadena.substring(1) : " ";
 
 
 // código de prueba
 console.log(capitalizar("pedro")); // "Pedro"
 console.log(capitalizar("hola mundo")); // "Hola mundo"
 console.log(capitalizar("")); // ""
+
+
+/* ## 17. Capitalizar cada palabra
+
+Escribir una función llamada `capitalizar` que reciba un string y capitalice la primera letra **de cada palabra**:
+
+```javascript
+// escribe tu función acá
+ */
+const capitalizarPalabras = (cadena) => {
+  return cadena.split(" ").map(letra => capitalizar(letra)).join(" ");
+}
+// código de prueba
+console.log(capitalizarPalabras("hola mundo")) // "Hola Mundo"
+console.log(capitalizarPalabras("make it real")) // "Make It Real"
+console.log(capitalizarPalabras("")) // ""
