@@ -334,34 +334,43 @@ Los complementos son los siguientes:
 * A -> U */
 
 function transcribir(cadena) {
-  
   let arrCad = Array.from(cadena);
-  
-  for(let letra = 0; letra < arrCad.length; letra++){
-    console.log(arrCad)
-    if (arrCad[letra]=== 'G') {
-      arrCad[letra] = 'C'
-      console.log(arrCad[letra])
-      
-    }
-    else if(arrCad[letra] === 'C') {
-      arrCad[letra] = 'G';
-      console.log(arrCad[letra])
-      
-    }
-    if (arrCad[letra] === 'T') {
-      arrCad[letra] = 'A';
-      console.log(arrCad[letra])
-      
-    }
-    else if (arrCad[letra] === 'A') {
-      arrCad[letra] = 'U';
-      console.log(arrCad[letra])
-  }
-}return arrCad.join("")
-}; 
 
+  for (let letra = 0; letra < arrCad.length; letra++) {
+    console.log(arrCad);
+    if (arrCad[letra] === "G") {
+      arrCad[letra] = "C";
+      console.log(arrCad[letra]);
+    } else if (arrCad[letra] === "C") {
+      arrCad[letra] = "G";
+      console.log(arrCad[letra]);
+    }
+    if (arrCad[letra] === "T") {
+      arrCad[letra] = "A";
+      console.log(arrCad[letra]);
+    } else if (arrCad[letra] === "A") {
+      arrCad[letra] = "U";
+      console.log(arrCad[letra]);
+    }
+  }
+  return arrCad.join("");
+}
 
 // código de prueba
 console.log(transcribir("ACGT")); // "UGCA"
 console.log(transcribir("ACGTGGTCTTAA")); // "UGCACCAGAAUU"
+
+/* ## 16. Capitalizar palabra
+
+Escribir una función llamada `capitalizar` que reciba un string y capitalice la primera letra:
+
+```javascript
+// escribe tu función acá
+*/
+const capitalizar = (cadena) => cadena != "" ? cadena[0].toUpperCase() + cadena.substring(1) : "";
+
+
+// código de prueba
+console.log(capitalizar("pedro")); // "Pedro"
+console.log(capitalizar("hola mundo")); // "Hola mundo"
+console.log(capitalizar("")); // ""
