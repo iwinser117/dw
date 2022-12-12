@@ -7,7 +7,7 @@ async function fetchData(urlApi) {
   const data = await response.json();
   return data;
 }
-const arr = [];
+
 (async () => {
   try {
     const date = await fetchData(API);
@@ -20,10 +20,10 @@ const arr = [];
 
 
 
-/* const arr = []
+const arr = []
 setTimeout(()=>{
     console.log(arr)
-},1000) */
+},5000)
 
 /* 
 const arrVacio = [];
