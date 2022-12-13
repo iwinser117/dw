@@ -8,11 +8,12 @@ const Footer = () => {
     return (
         
         <>
-        <div>
-        {pagina.map((page) =>(
-            <Paginacion character={page} />
+        <h2>{pagina.pages}</h2>
+        {/* <div>
+        {pagina.map((item, index) =>(
+            <Paginacion key={index} item={item} />
         ))}
-        </div>
+        </div> */}
             
         </>
     );

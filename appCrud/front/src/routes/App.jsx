@@ -10,12 +10,13 @@ import Footer from "../containers/Footer";
 const App = () => {
   return (
     <>
-          <Nav/>
-      <Header/>
-      <Card/>
-      <BtnArriba/>
-      {/* <Paginacion/> */}
-      </>
+      <Nav />
+      <Header />
+      <Card />
+      <BtnArriba />
+      <Footer/>
+      <Paginacion/>
+    </>
   );
 };
 
