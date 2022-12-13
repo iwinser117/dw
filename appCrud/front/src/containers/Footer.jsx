@@ -8,7 +8,11 @@ const Footer = () => {
     return (
         
         <>
-        <h2>{pagina.pages}</h2>
+        <div className='text-center bg-primary d-block '>
+            <p>hola este el es footer muy largo señores</p>
+            <Paginacion/>
+        </div>
+        
         {/* <div>
         {pagina.map((item, index) =>(
             <Paginacion key={index} item={item} />

@@ -4,13 +4,13 @@ import axios from "axios";
 const useGetCharacter = (API) => {
   const [personaje, setPersonaje] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [pagina, setPagina] = useState([]);
+  
 
   useEffect(() => {
     const loadData = async () => {
       const response = await axios(API);
       setPersonaje(response.data.results);
-      setPagina(response.data.info)
+      /* setPagina(response.data.info) */
       setIsLoading(false);
     };
     loadData();

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import useGetCharacter from "../hooks/useGetCharacter";
 import TargetPersonaje from "../components/TargetPersonaje";
-const API = "https://rickandmortyapi.com/api/character/";
+const API = "https://rickandmortyapi.com/api/character";
 
 const Card = () => {
   const personaje = useGetCharacter(API);
