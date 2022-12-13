@@ -1,18 +1,21 @@
 import React from "react";
-import { BrowserRouter, Switch, Route }  from "react-dom";
-import Button from "../components/Button";
-import TargetPersonaje from "../components/TargetPersonaje";
+import { Switch, Route } from "react-router-dom";
 import Card from "../containers/Card";
 import Nav from "../containers/Nav";
+import Header from "../containers/Header";
+import BtnArriba from "../components/BtnArriba";
+import Paginacion from "../components/Paginacion";
+import Footer from "../containers/Footer";
 
 const App = () => {
   return (
     <>
-      <Nav/>
-      <h2>Bienvenidos a este consumo de api</h2>
-      <Button />
+          <Nav/>
+      <Header/>
       <Card/>
-    </>
+      <BtnArriba/>
+      {/* <Paginacion/> */}
+      </>
   );
 };
 
