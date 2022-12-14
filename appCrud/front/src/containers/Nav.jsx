@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import useGetCapitulo from "../hooks/useGetEpisodio";
+import ListEpisodios from "../components/ListEpisodios";
+const APIEPISODE = "https://rickandmortyapi.com/api/episode";
 /* import ok from '../assets/ok.ico' */
 const Nav = () => {
+  const capitulo = useGetCapitulo(APIEPISODE);
+
   return (
     <nav className="navbar navbar-expand-lg bg-dark bg-gradient" id="ancla">
   <div className="container-fluid " >
@@ -21,15 +26,21 @@ const Nav = () => {
           <NavLink to={"/locaciones"} className="nav-link text-white">Ubicaciones</NavLink>
         </li>
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Episodios
-          </a>
-          <ul className="dropdown-menu">
-            {/* esto sera un componente que me liste los episodios */}
-            <li><a className="dropdown-item" href="#">lista de episodios</a></li>
-            
-          </ul>
-        </li>
+        <a className="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Episodios
+        </a>
+        <ul className="dropdown-menu">
+        {capitulo.map(ep => (
+          
+        <ListEpisodios key={ep.id} ep={ep} />
+        
+      ))}
+      
+          {/* <li><a className="dropdown-item" href="#">jioo</a></li> */}
+          
+        </ul>
+      </li>
+        
       </ul>
       <form className="d-flex" role="search">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>

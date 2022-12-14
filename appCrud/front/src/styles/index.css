@@ -25,6 +25,7 @@ background: linear-gradient(185deg, rgba(20,23,33,1) 18%, rgba(52,52,52,1) 81%);
 
 .rounded-circle {
   width: 150px;
+  border:3px white solid;
 }
 .modal-dialog {
   width: 30%;
@@ -36,7 +37,4 @@ background: linear-gradient(185deg, rgba(20,23,33,1) 18%, rgba(52,52,52,1) 81%);
     background: rgb(20,23,33);
 background: linear-gradient(185deg, rgba(20,23,33,1) 18%, rgba(52,52,52,0.7595413165266106) 81%);
 color:white;
-}
-.trg-person img {
-    border-color:1px white ;
 }

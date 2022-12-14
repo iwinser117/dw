@@ -9,7 +9,7 @@ const TargetPersonaje = ({ character }) => {
         {character.name}
         <br />
         {character.origin.name} <br />
-        {character.location.name}
+        {character.species}
       </p>
 
       <img src={character.image} className="rounded-circle img-trg-person" alt="" />
