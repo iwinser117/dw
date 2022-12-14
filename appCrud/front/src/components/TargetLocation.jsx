@@ -1,14 +1,19 @@
 import React,{useState} from "react";
 import ReactDOM from 'react-dom'
+import { NavLink } from "react-router-dom";
+
 const TargetLocation = ({dat}) => {
   /* const { name, id, type} = dat; */
   return (
-    <ul className=' border border-1'>
-            <li >
-            {dat.name}
-            </li>
+    <div className='modal-dialog text-center border border-1 rounded-circle'>
+            <div className=''>
+            {dat.name}<br />
+            tipo:  {dat.type}<br />
+            {dat.dimension} <br/>
+            <NavLink > Detalles</NavLink>
+            </div>
         
-        </ul>
+        </div>
   );
 };
 

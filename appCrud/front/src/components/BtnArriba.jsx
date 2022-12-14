@@ -1,12 +1,19 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const BtnArriba = () => {
+  const scrollToTop = () =>{
+    window.scrollTo({
+      top: 0, 
+      behavior: 'smooth'
+    });
+  };
   return (
     <>
       <div className="position-relative">
         <div className="position-fixed  bottom-0  start-5 end-0 translate-middle">
-          <button type="button" className="btn btn-light">
+          
+          <button type="button" className="btn btn-light" onClick={scrollToTop} >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -21,6 +28,7 @@ const BtnArriba = () => {
               />
             </svg>
           </button>
+          
         </div>
       </div>
     </>

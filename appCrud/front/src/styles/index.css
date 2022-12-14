@@ -1,6 +1,25 @@
-.pagination {
+.home {
+    height: 100vh;
+}.banner {
+    background-image: url(https://i.pinimg.com/564x/8c/cb/48/8ccb48330a7757a44b4f093b27772efd.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    background-position: center center;
+    flex-direction: column;
     
+} 
+.banner h2  {
+    font-family: 'Dokdo', cursive;
+    font-size: 52px;
+    color: aliceblue;
 }
+.banner p{
+    font-family: 'Dokdo', cursive;
+    color: aliceblue;
+    font-size: 32px;
+}
+
 .rounded-circle {
     width: 150px;
 }
