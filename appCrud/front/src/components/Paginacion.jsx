@@ -5,7 +5,8 @@ import useGetDatos from "../hooks/useGetDatos";
 const API = "https://rickandmortyapi.com/api/character";
 
 const Paginacion = () => {
-  const [pagina , setPagina] = useState();
+  const [pagina , setPagina] = useState({});
+  const {next, prev, pages } = pagina
   useEffect(() => {
     const loadData = async () => {
       const response = await axios(API);
@@ -13,14 +14,14 @@ const Paginacion = () => {
       setPagina(response.data.info)
     };
     loadData();
-    
+
   }, []);
   
-
-console.log(pagina);
   return (
+    
     <div>
       <nav aria-label="Page navigation example">
+{/*         {pagina.map((info) => {})} */}
         <ul className="pagination justify-content-center">
           <li className="page-item disabled">
             <a className="page-link" aria-disabled="true">
@@ -30,7 +31,7 @@ console.log(pagina);
           
           <li className="page-item">
             <a className="page-link" >
-              {}+111
+              {next}+111
             </a>
           </li>
           <li className="page-item">
