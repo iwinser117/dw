@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const TargetLocation = ({dat}) => {
   /* const { name, id, type} = dat; */
   return (
-    <div className='modal-dialog text-center border border-1 rounded-circle'>
+    <div className='modal-dialog text-center border border-1 rounded-circle trg-location'>
             <div className=''>
             {dat.name}<br />
             tipo:  {dat.type}<br />

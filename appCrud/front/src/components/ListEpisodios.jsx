@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 const ListEpisodios = ({ep}) => {
   return (
     
-        <li>{ep.name}</li>
+        <li className="dropdown-item ">{ep.name}</li>
     
   );
 };

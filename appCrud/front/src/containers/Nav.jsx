@@ -20,7 +20,7 @@ const Nav = () => {
           <NavLink to={'/'} className="nav-link active text-white" aria-current="page">Home</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to={"/personajes"} className="nav-link text-white">Pesonajes</NavLink>
+          <NavLink to={"/personajes"} className="nav-link text-white">Personajes</NavLink>
         </li>
         <li className="nav-item">
           <NavLink to={"/locaciones"} className="nav-link text-white">Ubicaciones</NavLink>
@@ -29,10 +29,10 @@ const Nav = () => {
         <a className="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Episodios
         </a>
-        <ul className="dropdown-menu">
+        <ul className="dropdown-menu ">
         {capitulo.map(ep => (
           
-        <ListEpisodios key={ep.id} ep={ep} />
+        <ListEpisodios  key={ep.id} ep={ep} />
         
       ))}
       

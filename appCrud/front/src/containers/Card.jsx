@@ -10,12 +10,12 @@ const Card = () => {
   return (
     <>
     <React.StrictMode>
-    <section className="container-fluid row justify-content-around d-flex">
-      <h1>Personajes</h1>
+    <section className="container row justify-content-around d-flex sect-per">
+      <h1 className="title-pers">Personajes</h1>
       {personaje.map((character) => (
         <TargetPersonaje key={character.id} character={character} />
       ))}
-      <BtnArriba />
+      
       </section>
       </React.StrictMode>
     </>

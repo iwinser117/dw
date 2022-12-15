@@ -1,5 +1,18 @@
+
 .home {
   height: 100vh;
+}
+.title-pers {
+  text-align: center;
+  color:white;
+  font-size: 5em;
+  font-family: "Dokdo", cursive;;
+}
+.sect-per {
+  margin: auto;
+  max-width: 100%;
+  background: rgb(37,36,26);
+background: linear-gradient(180deg, rgba(37,36,26,0.8267682072829132) 14%, rgba(28,36,43,1) 99%);
 }
 .banner {
   height: 100vh;
@@ -25,16 +38,38 @@ background: linear-gradient(185deg, rgba(20,23,33,1) 18%, rgba(52,52,52,1) 81%);
 
 .rounded-circle {
   width: 150px;
-  border:3px white solid;
+  border:1px white solid;
 }
 .modal-dialog {
-  width: 30%;
+  width: 22%;
   padding: 1em;
   margin: 12px;
 }
 
-.trg-person {
-    background: rgb(20,23,33);
-background: linear-gradient(185deg, rgba(20,23,33,1) 18%, rgba(52,52,52,0.7595413165266106) 81%);
+.trg-person , .trg-location{
+  background-image:url(https://img.freepik.com/vector-premium/resumen-patrones-fisuras-estrellas-diferentes-tamanos-colores-negro-gris_444390-18107.jpg?w=740);
 color:white;
+}
+.dropdown-menu {
+
+  z-index: 200;
+  height: 50vh;
+  overflow-y: scroll;
+  
+}
+.dropdown-menu::-webkit-scrollbar{
+  width: 3px;
+}
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background:#4545;
+  border-radius:12px;
+  -webkit-border-radius:12px;
+  -moz-border-radius:12px;
+  -ms-border-radius:12px;
+  -o-border-radius:12px;
+}
+.btn-arriba {
+  position: absolute;
+  background: #000;
+  width: 30px;
 }
