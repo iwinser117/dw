@@ -1,20 +1,17 @@
-import React from 'react';
-import Paginacion from '../components/Paginacion'
+import React, { useEffect } from "react";
+import Paginacion from "../components/Paginacion";
+import useGetDatos from "../hooks/useGetDatos";
 
-
+const API = "https://rickandmortyapi.com/api/character";
 const Footer = () => {
-    
-    return (
-        
-        <>
-        <div className='text-center bg-primary d-block '>
-            <p>hola este el es footer muy largo señores</p>
-            <Paginacion/>
-        </div>
-        
-            
-        </>
-    );
-}
+  const pagina = useGetDatos(API);
+  return (
+    <>
+      {pagina.map((index, value) => {
+        <Paginacion key={index} value={value} />;
+      })}
+    </>
+  );
+};
 
 export default Footer;

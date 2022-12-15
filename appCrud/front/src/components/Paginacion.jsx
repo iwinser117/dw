@@ -1,36 +1,39 @@
-import React, { useState, useEffect } from "react";
-import ReactPaginate from 'react-paginate';
+import React from "react";
 
-//usando otra pagina aun no esta pero esta la ligica
-
-
-const Paginacion = ({personaje}) => {
-  
-    <>
-    {setTimeout((personaje) => {
-      console.log(personaje);
-    },2000)}
-      <nav aria-label="Page navigation example position-relative">
-        <ul className="pagination justify-content-center position-fixed  top-60 bottom-0 start-50  position-fixed  bottom-0  start-5 end-0 translate-middle-x">
-          <li className="page-item">
-            <a className="page-link">
-              Prev
+const Paginacion = ({value}) => {
+  return (
+    <div>
+      <nav aria-label="Page navigation example">
+        <ul className="pagination justify-content-center">
+          <li className="page-item disabled">
+            <a className="page-link"  aria-disabled="true">
+              {next}
             </a>
           </li>
           <li className="page-item">
             <a className="page-link" href="#">
-              
+            {next}
             </a>
           </li>
           <li className="page-item">
-            <a className="page-link" >
-              Next
+            <a className="page-link" href="#">
+            {next}
+            </a>
+          </li>
+          <li className="page-item">
+            <a className="page-link" href="#">
+              {next}
+            </a>
+          </li>
+          <li className="page-item">
+            <a className="page-link" href="#">
+            {next}
             </a>
           </li>
         </ul>
       </nav>
-    </>
-  
+    </div>
+  );
 };
 
 export default Paginacion;

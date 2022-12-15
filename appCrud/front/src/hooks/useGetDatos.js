@@ -1,32 +1,26 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Card from "../containers/Card";
 
-const API = 'https://rickandmortyapi.com/api'
-const useGetCharacter = (API) => {
+const useGetDatos = (API) => {
   const [personaje, setPersonaje] = useState([]);
   const [pagina, setPagina] = useState([]);
   const [capitulo, setCapitulo] = useState([]);
   const [location, setLocation] = useState([]);
-  
 
   useEffect(() => {
     const loadData = async () => {
       const response = await axios(API);
-      setPersonaje(response.data.character.results);
-      setPagina(response.data.character.info)
-      setCapitulo(response.data.episode.results)
-      setLocation(response.data.location.results)
-      setIsLoading(false);
+      setPersonaje(response.data.results);
+      setPagina(response.data.info);
+      setCapitulo(response.data.results);
+      setLocation(response.data.results);
+      
     };
     loadData();
   }, []);
-  return {
-    personaje,
-    pagina,
-    capitulo,
-    location
-  }
+  return pagina ,personaje, capitulo, location;
   
 };
 
-export default useGetCharacter;
+export default useGetDatos;

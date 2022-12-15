@@ -61,7 +61,7 @@ color:white;
   width: 3px;
 }
 .dropdown-menu::-webkit-scrollbar-thumb {
-  background:#4545;
+  background:rgb(255, 255, 255);
   border-radius:12px;
   -webkit-border-radius:12px;
   -moz-border-radius:12px;
