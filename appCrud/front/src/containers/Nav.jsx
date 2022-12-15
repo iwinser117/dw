@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import useGetCapitulo from "../hooks/useGetEpisodio";
 import ListEpisodios from "../components/ListEpisodios";
-const APIEPISODE = "https://rickandmortyapi.com/api/episode";
+
 /* import ok from '../assets/ok.ico' */
 const Nav = () => {
-  const capitulo = useGetCapitulo(APIEPISODE);
+
 
   return (
     <nav className="navbar navbar-expand-lg bg-dark bg-gradient" id="ancla">
@@ -30,12 +29,12 @@ const Nav = () => {
           Episodios
         </a>
         <ul className="dropdown-menu ">
-        {capitulo.map(ep => (
+        {/* {capitulo.map(ep => (
           
         <ListEpisodios  key={ep.id} ep={ep} />
         
       ))}
-      
+       */}
           {/* <li><a className="dropdown-item" href="#">jioo</a></li> */}
           
         </ul>
