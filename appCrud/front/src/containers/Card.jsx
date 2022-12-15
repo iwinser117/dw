@@ -7,6 +7,7 @@ const API = "https://rickandmortyapi.com/api/character";
 
 const Card = () => {
   const personaje = useGetDatos(API);
+  
   /* const [personaje, setPersonaje] = useState([]);
   const [pagina, setPagina] = useState([]);
   useEffect (()=> {

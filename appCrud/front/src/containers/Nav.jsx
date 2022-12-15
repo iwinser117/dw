@@ -8,7 +8,7 @@ const API = "https://rickandmortyapi.com/api/episode";
 
 const Nav = () => {
 
-  const capitulo = useGetDatos(API)
+  const datoUn = useGetDatos(API)
   /* const [capitulo, setCapitulo] = useState([]);
   
 
@@ -45,7 +45,7 @@ const Nav = () => {
         </a>
         <ul className="dropdown-menu ">
           {/* <ListEpisodios/> */}
-        {capitulo.map(ep => (
+        {datoUn.map(ep => (
           
         <ListEpisodios  key={ep.id} ep={ep} />
         
