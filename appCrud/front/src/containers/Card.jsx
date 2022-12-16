@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import useGetDatos from "../hooks/useGetDatos";
-
 import TargetPersonaje from "../components/TargetPersonaje";
-
+import Paginacion from "../components/Paginacion";
 const API = "https://rickandmortyapi.com/api/character";
 
 const Card = () => {
@@ -26,9 +25,7 @@ const Card = () => {
         {personaje.map((character, index) => (
           <TargetPersonaje key={index} character={character} />
         ))}
-        {/* {personaje.map((character) => (
-        <li key={character.id} character={character}  >{character.name}</li>
-      ))} */}
+        
       </section>
     </React.StrictMode>
   );
