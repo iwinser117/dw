@@ -1,25 +1,12 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import useGetDatos from "../hooks/useGetDatos";
+
 import ListEpisodios from "../components/ListEpisodios";
 
-const API = "https://rickandmortyapi.com/api/episode";
 
 const Nav = () => {
 
-  const datoUn = useGetDatos(API)
-  /* const [capitulo, setCapitulo] = useState([]);
-  
-
-  useEffect (()=> {
-    const loadData = async () => {
-      const response = await axios(API)
-      setCapitulo(response.data.results);
-      
-    };
-    loadData();
-  }) */
 
   return (
     <nav className="navbar navbar-expand-lg bg-dark bg-gradient" id="ancla">
@@ -44,12 +31,12 @@ const Nav = () => {
           Episodios
         </a>
         <ul className="dropdown-menu ">
-          {/* <ListEpisodios/> */}
-        {datoUn.map(ep => (
+          <ListEpisodios/>
+        {/* {datoUn.map(ep => (
           
         <ListEpisodios  key={ep.id} ep={ep} />
         
-      ))}
+      ))} */}
       
           {/* <li><a className="dropdown-item" href="#">jioo</a></li> */}
           

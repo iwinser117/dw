@@ -1,32 +1,31 @@
 import React , {useState, useEffect} from "react";
 import axios from "axios";
-const API = "https://rickandmortyapi.com/api/character/";
-const Paginacion = () => {
-  const {next, prev, pages } = pagina
-    /* const [page, setPage] = useState(1);
-    const [perPage, setPerPage] = useState(10);
-    const [currentPage, setCurrentPage] = useState(1);
-    const [totalPages, setTotalPages] = useState(1); */
-  
-    const loadData = async () => {
-      const response = await axios(API);
-      const pagina = response.data.info;
-      return  pagina;
-    };
-    loadData();
+
+const Paginacion = ({prev, next, onPrev, OnNext}) => {
+  const handlePrev = ()=> {
+    onPrev();
+  }
+  const handleNext = ()=> {
+    OnNext();
+  }
   return (
-    <>
+    <nav aria-label="Page navigation example position-relative">
+      <ul class="pagination justify-content-center position-fixed bottom-0 end-50 start-50">
+      {prev ? (
+        <li className="page-item">
+          <button className="page-link" onClick={handlePrev}>Anterior</button>
+        </li>
+      ): null}
+        
+       
+        
+        {next? (
+        <li className="page-item">
+          <button className="page-link" onClick={handleNext}>Siguiente</button>
+        </li>):null}
+      </ul>
+    </nav>
     
-    {pagina.map(
-      (item, index) => (
-        <div key={index}>
-          <span>{item.next}</span>
-          <span>{item.count}</span>
-        </div>
-      )
-    )}
-    
-    </>
   );
 };
 

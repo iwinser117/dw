@@ -8,9 +8,11 @@ const TargetLocation = ({dat}) => {
   return (
     <div className='modal-dialog text-center border border-1 rounded-circle trg-location'>
             <div className=''>
-            {dat.name}<br />
+            
+            y su datico de ubicacion
+            {/* {dat.name}<br />
             tipo:  {dat.type}<br />
-            {dat.dimension} <br/>
+            {dat.dimension} <br/> */}
             <NavLink > Detalles</NavLink>
             </div>
         
