@@ -10,7 +10,7 @@ const Paginacion = ({prev, next, onPrev, OnNext}) => {
   }
   return (
     <nav aria-label="Page navigation example position-relative">
-      <ul class="pagination justify-content-center position-fixed bottom-0 end-50 start-50">
+      <ul className="pagination justify-content-center position-fixed bottom-0 end-50 start-50">
       {prev ? (
         <li className="page-item">
           <button className="page-link" onClick={handlePrev}>Anterior</button>

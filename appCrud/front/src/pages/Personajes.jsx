@@ -1,9 +1,6 @@
-import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Nav from "../containers/Nav";
 import Card from "../containers/Card";
-import Footer from "../containers/Footer";
 import BtnArriba from "../components/BtnArriba";
 import Paginacion from "../components/Paginacion";
 const Personajes = () => {
@@ -32,6 +29,7 @@ const Personajes = () => {
   return (
     <>
       <Nav />
+      
       <Card personajes={personajes} />
       {/* {personajes.map((character, index) => (
           <Card key={index} character={character} />

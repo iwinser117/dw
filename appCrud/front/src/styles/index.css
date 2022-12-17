@@ -2,7 +2,7 @@
 .home {
   height: 100vh;
 }
-.title-pers {
+.title-pers , .title-ubicacion{
   text-align: center;
   color:white;
   font-size: 5em;
@@ -37,7 +37,7 @@ background: linear-gradient(185deg, rgba(20,23,33,1) 18%, rgba(52,52,52,1) 81%);
 }
 
 .rounded-circle {
-  width: 150px;
+  width: 70%;
   border:1px white solid;
 }
 .modal-dialog {
