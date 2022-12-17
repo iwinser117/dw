@@ -5,7 +5,7 @@ import Card from "../containers/Card";
 import Layout from "../containers/Layout";
 import Home from "../pages/Home";
 import Personajes from "../pages/Personajes";
-import Lcal from "../pages/Lcal";
+import Locaciones from "../pages/Locaciones";
 import NotFound from "../pages/NotFound";
 const App = () => {
   return (
@@ -13,7 +13,7 @@ const App = () => {
       <Routes >
         <Route path="/" element={<Home />} />
         <Route path="/personajes"  element={<Personajes />} />
-        <Route path="/locaciones" element={<Lcal />} />
+        <Route path="/locaciones" element={<Locaciones />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </HashRouter>

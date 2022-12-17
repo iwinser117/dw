@@ -5,7 +5,7 @@ import Location from '../containers/Location'
 import Nav from "../containers/Nav";
 import BtnArriba from "../components/BtnArriba"
 
-const Lcal = () => {
+const Locaciones = () => {
     return (
         <>
         <Nav/>
@@ -15,4 +15,4 @@ const Lcal = () => {
     );
 }
 
-export default Lcal;
+export default Locaciones;
