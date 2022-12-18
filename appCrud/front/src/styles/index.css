@@ -45,10 +45,13 @@ background: linear-gradient(185deg, rgba(20,23,33,1) 18%, rgba(52,52,52,1) 81%);
   padding: 1em;
   margin: 12px;
 }
-
+.img-trg-person-live{
+  border:solid 5px green;
+}
 .trg-person , .trg-location{
   background-image:url(https://img.freepik.com/vector-premium/resumen-patrones-fisuras-estrellas-diferentes-tamanos-colores-negro-gris_444390-18107.jpg?w=740);
 color:white;
+border:solid 2px green;
 }
 .dropdown-menu {
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-
+import StatusPerLive from "../components/StatusPerLive";
 const TargetPersonaje = ({ character }) => {
   /* const { id, status, name, image } = character; */
   return (
@@ -11,8 +11,16 @@ const TargetPersonaje = ({ character }) => {
         {character.origin.name} <br />
         {character.species}
       </p>
-
-      <img src={character.image} className="rounded-circle img-trg-person" alt="" />
+      {character.status === "Alive" ? (
+        <StatusPerLive character={character} />
+      ) : (
+        <StatusPerLive
+          character={character}
+          style={{
+            border: "solid 1px blue"
+          }}
+        />
+      )}
     </div>
   );
 };

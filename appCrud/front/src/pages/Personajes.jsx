@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import Nav from "../containers/Nav";
 import Card from "../containers/Card";
 import BtnArriba from "../components/BtnArriba";
@@ -16,28 +16,23 @@ const Personajes = () => {
         setPage(data.info);
       });
   };
-  /* onPrev, OnNext */
   const onPrev = () => {
     fetchPersonajes(page.prev);
   };
   const OnNext = () => {
     fetchPersonajes(page.next);
   };
+
   useEffect(() => {
     fetchPersonajes(APIINICIAL);
   }, []);
   return (
     <>
       <Nav />
-      
       <Card personajes={personajes} />
-      {/* {personajes.map((character, index) => (
-          <Card key={index} character={character} />
-        ))} */}
       <Paginacion
         prev={page.prev}
         next={page.next}
-        /* pages={page.pages} */
         onPrev={onPrev}
         OnNext={OnNext}
       />
