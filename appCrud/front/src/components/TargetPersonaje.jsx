@@ -7,7 +7,7 @@ const TargetPersonaje = ({ character }) => {
   /* const { id, status, name, image } = character; */
   return (
     <div className="modal-dialog text-center border border-1 rounded-circle trg-person">
-      <NavLink to={} className="pe-auto" onClick={()=> setDetalles(!detalles)} >
+      <NavLink className="pe-auto" onClick={()=> setDetalles(!detalles)} >
         <i className="fa-regular fa-eye"></i>
       </NavLink>
 
