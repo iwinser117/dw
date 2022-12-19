@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { HashRouter, Routes, Route } from "react-router-dom";
-import Card from "../containers/Card";
-import Layout from "../containers/Layout";
+import TargetDetails from "../components/TargetDetails";
 import Home from "../pages/Home";
 import Personajes from "../pages/Personajes";
 import Locaciones from "../pages/Locaciones";
@@ -12,6 +11,7 @@ const App = () => {
     <HashRouter>
       <Routes >
         <Route path="/" element={<Home />} />
+        <Route path="/:id" element={<TargetDetails />} />
         <Route path="/personajes"  element={<Personajes />} />
         <Route path="/locaciones" element={<Locaciones />} />
         <Route path="*" element={<NotFound />} />

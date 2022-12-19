@@ -23,6 +23,7 @@ const Location = ({location}) => {
       <section className="container-fluid row justify-content-around d-flex sect-per">
         <h1 className="title-ubicacion">Ubicaciones</h1>
         <Busqueda
+        placeholder={"¿Buscas a alguien?"}
         search={search}
         searchInput={searchInput}
         handleSearch={handleSearch}

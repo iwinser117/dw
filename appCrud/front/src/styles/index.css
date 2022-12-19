@@ -9,6 +9,7 @@
   font-family: "Dokdo", cursive;;
 }
 .sect-per {
+  min-height: 90vh;
   margin: auto;
   max-width: 100%;
   background: rgb(37,36,26);
@@ -48,10 +49,14 @@ background: linear-gradient(185deg, rgba(20,23,33,1) 18%, rgba(52,52,52,1) 81%);
 .img-trg-person-live{
   border:solid 5px green;
 }
+.img-trg-person-muerto {
+  border:solid 5px red;
+
+}
 .trg-person , .trg-location{
   background-image:url(https://img.freepik.com/vector-premium/resumen-patrones-fisuras-estrellas-diferentes-tamanos-colores-negro-gris_444390-18107.jpg?w=740);
 color:white;
-border:solid 2px green;
+border:solid 22px green;
 }
 .dropdown-menu {
 
@@ -75,4 +80,7 @@ border:solid 2px green;
   position: absolute;
   background: #000;
   width: 30px;
+}
+.busqueda {
+  max-height: 36px;
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useRef,useCallback } from "react";
+import React, { useState, useEffect, useMemo, useRef,useCallback, NavLink } from "react";
 import Busqueda from "../components/Busqueda";
 import TargetPersonaje from "../components/TargetPersonaje";
 import Paginacion from "../components/Paginacion";
